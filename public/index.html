@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMORA｜美国培育钻石品牌年度营销计划（可调预算版）</title>
+<style>
+:root{
+  --ink:#1d2433;--sub:#5b6478;--line:#e6e2d8;--bg:#faf8f4;--card:#fff;
+  --gold:#b08d57;--gold2:#d8bf8f;--gold-bg:#f6efe2;--navy:#1f2a44;--navy2:#2f3f63;
+  --green:#2f8f5b;--red:#c0483d;--amber:#c98a1b;--blue:#3a6ea5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:15px}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,#1f2a44 0%,#2f3f63 55%,#6b5a3c 100%);color:#fff;padding:56px 24px 40px}
+.hero .wrap{max-width:1240px;margin:0 auto}
+.hero .tag{display:inline-block;border:1px solid var(--gold2);color:var(--gold2);border-radius:20px;padding:2px 12px;font-size:12px;letter-spacing:1px}
+.hero h1{font-size:34px;margin:14px 0 6px;font-weight:700;letter-spacing:.5px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p{margin:4px 0;color:#d9deea;max-width:900px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:26px}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 14px}
+.kpi .l{font-size:12px;color:#c9cfdd}.kpi .v{font-size:22px;font-weight:700;color:#fff;margin-top:2px}
+.kpi .s{font-size:11px;color:#aab2c5}
+/* budget bar */
+.bbar{position:sticky;top:0;z-index:50;background:#fffdf8;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.bbar .wrap{max-width:1240px;margin:0 auto;padding:10px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.bbar label{font-weight:600;color:var(--navy)}
+.bbar input[type=number]{width:130px;padding:6px 8px;border:1px solid var(--gold2);border-radius:8px;font-size:15px;font-weight:600;color:var(--navy)}
+.bbar input[type=range]{flex:1;min-width:180px;accent-color:var(--gold)}
+.btn{border:1px solid var(--gold2);background:#fff;color:var(--navy);padding:5px 11px;border-radius:8px;cursor:pointer;font-size:13px}
+.btn:hover{background:var(--gold-bg)}.btn.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.bbar .live{font-size:13px;color:var(--sub)}.bbar .live b{color:var(--navy)}
+/* layout */
+.layout{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:230px 1fr;gap:28px;padding:24px}
+nav.toc{position:sticky;top:70px;align-self:start;max-height:calc(100vh - 90px);overflow:auto;font-size:13px;padding-right:6px}
+nav.toc .t{font-weight:700;color:var(--navy);margin:4px 0 8px}
+nav.toc a{display:block;color:var(--sub);padding:3px 8px;border-left:2px solid transparent}
+nav.toc a:hover{color:var(--navy);border-left-color:var(--gold);text-decoration:none;background:var(--gold-bg)}
+nav.toc a.sub{padding-left:20px;font-size:12px}
+main section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin-bottom:22px}
+h2{font-size:23px;color:var(--navy);margin:0 0 4px;display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--gold2);font-size:16px}
+.lead{color:var(--sub);margin:0 0 16px;font-size:13.5px}
+h3{font-size:17.5px;color:var(--navy2);margin:24px 0 10px;padding-left:10px;border-left:4px solid var(--gold)}
+h4{font-size:15px;margin:16px 0 8px;color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:13.5px}
+th{background:#f3efe6;color:var(--navy);text-align:left;font-weight:600;padding:8px 10px;border-bottom:2px solid var(--gold2)}
+td{padding:7px 10px;border-bottom:1px solid #eee9de;vertical-align:top}
+tr:hover td{background:#fcfaf5}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+tfoot td{font-weight:700;background:#faf6ec}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff}
+.card.gold{background:var(--gold-bg);border-color:var(--gold2)}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card.navy h4{color:var(--gold2)}
+.card h4{margin-top:0}
+.pill{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:10px;margin:0 2px;white-space:nowrap}
+.p-d{background:#e3f0e8;color:#22704a}.p-a{background:#fdeedd;color:#9a5b0a}.p-c{background:#fde4e1;color:#a23a30}.p-s{background:#e6edf7;color:#2c5a8c}
+.src{font-size:11.5px;color:var(--blue);background:#eef3fa;padding:0 5px;border-radius:4px;white-space:nowrap}
+.note{font-size:12.5px;color:var(--sub);background:#f7f5ef;border-left:3px solid var(--gold2);padding:8px 12px;border-radius:0 8px 8px 0;margin:10px 0}
+.warn{font-size:13px;color:#8a3b12;background:#fff3e6;border:1px solid #f3c99b;padding:8px 12px;border-radius:8px;margin:8px 0}
+.dyn{color:#7a5a22;font-weight:600;background:linear-gradient(transparent 62%,#f3e3c2 62%)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0}
+.flow span{background:var(--navy);color:#fff;padding:6px 12px;border-radius:20px;font-size:13px}
+.flow i{color:var(--gold);font-style:normal;font-weight:700}
+ul.tight{margin:6px 0;padding-left:20px}ul.tight li{margin:2px 0}
+.house{border:2px solid var(--navy);border-radius:10px;overflow:hidden;text-align:center}
+.house .roof{background:var(--navy);color:var(--gold2);padding:10px;font-weight:700}
+.house .row{display:grid;grid-template-columns:repeat(3,1fr)}
+.house .row div{padding:10px;border-right:1px solid var(--line);font-size:13px}
+.house .row div:last-child{border-right:none}
+.house .base{background:var(--gold-bg);padding:8px;font-size:13px;border-top:1px solid var(--line)}
+/* alloc editor */
+.alloc input{width:62px;padding:3px 6px;border:1px solid var(--gold2);border-radius:6px;text-align:right}
+.bar-in{height:8px;background:#efe8da;border-radius:4px;overflow:hidden;min-width:80px}
+.bar-in div{height:100%;background:linear-gradient(90deg,var(--gold),var(--navy2))}
+.chart{width:100%;overflow-x:auto}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.assump{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.assump label{font-size:12px;color:var(--sub);display:block}
+.assump input{width:100%;padding:5px 8px;border:1px solid var(--line);border-radius:6px;font-size:14px}
+.gate{display:flex;gap:10px;align-items:flex-start}
+.gate b.g{background:var(--green);color:#fff;border-radius:6px;padding:0 6px;font-size:12px}
+.foot{color:var(--sub);font-size:12px;text-align:center;padding:20px}
+.ok{color:var(--green);font-weight:600}.bad{color:var(--red);font-weight:600}
+@media (max-width:980px){.layout{grid-template-columns:1fr}nav.toc{display:none}.kpis{grid-template-columns:repeat(3,1fr)}.grid2,.grid3,.grid4,.assump{grid-template-columns:1fr}}
+@media print{.bbar,nav.toc{display:none}.layout{display:block}main section{break-inside:avoid-page}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <span class="tag">CMO 办公室 · 2027 财年营销计划 · 2026-11-10</span>
+  <h1>LUMORA<em>（暂定名）</em>｜美国培育钻石自有品牌年度营销计划</h1>
+  <p>框架：科特勒 G-STIC × 9 模块闭环（目标 → 5C → STP → 7T → 顾客旅程 → 进入与本地化 → 执行 → 测量与控制 → 测试与迭代）</p>
+  <p>数据：crawler 高级查询（Serper / Tavily / Apify）+ 基础查询，来源编号 S1–S51，见<a href="#appendix" style="color:#f0d9a8">附录</a>。凡是与预算有关的金额（<span class="dyn" style="color:#f0d9a8;background:none">金色下划线</span>）都会跟着顶部“年度营销预算”一起重算。</p>
+  <div class="kpis">
+   <div class="kpi"><div class="l">年度营销预算</div><div class="v" data-v="B">$100,000</div><div class="s">只含营销费用</div></div>
+   <div class="kpi"><div class="l">预计新客</div><div class="v" data-v="newC" data-f="int">—</div><div class="s">付费获客 + 自然/推荐</div></div>
+   <div class="kpi"><div class="l">预计收入</div><div class="v" data-v="rev">—</div><div class="s">首年，含复购</div></div>
+   <div class="kpi"><div class="l">MER（收入÷营销）</div><div class="v" data-v="mer" data-f="x">—</div><div class="s">目标 ≥ 2.0</div></div>
+   <div class="kpi"><div class="l">全成本 CAC</div><div class="v" data-v="cacFull">—</div><div class="s">营销费用 ÷ 新客</div></div>
+   <div class="kpi"><div class="l">扣营销后贡献</div><div class="v" data-v="contribAfter">—</div><div class="s">不含固定费用</div></div>
+  </div>
+ </div>
+</header>
+
+<div class="bbar">
+ <div class="wrap">
+  <label for="bIn">年度营销预算（USD）</label>
+  <input id="bIn" type="number" min="10000" max="5000000" step="1000" value="100000">
+  <input id="bRange" type="range" min="20000" max="1000000" step="5000" value="100000">
+  <span class="presets">
+   <button class="btn" data-b="50000">5 万</button><button class="btn on" data-b="100000">10 万</button><button class="btn" data-b="200000">20 万</button><button class="btn" data-b="500000">50 万</button><button class="btn" data-b="1000000">100 万</button>
+  </span>
+  <span class="live">新客 <b data-v="newC" data-f="int">—</b> · 收入 <b data-v="rev">—</b> · MER <b data-v="mer" data-f="x">—</b></span>
+  <button class="btn" onclick="window.print()">打印 / 存 PDF</button>
+ </div>
+</div>
+
+<div class="layout">
+<nav class="toc">
+ <div class="t">目录</div>
+ <a href="#s0">执行摘要</a>
+ <a href="#budget">★ 预算控制台</a>
+ <a href="#s1">① 目标与市场规模</a>
+ <a class="sub" href="#s1-1">市场规模 TAM/SAM/SOM</a>
+ <a class="sub" href="#s1-2">SMART 目标</a>
+ <a class="sub" href="#s1-3">单客经济</a>
+ <a href="#s2">② 5C 分析</a>
+ <a class="sub" href="#s2-1">环境 / 行业</a>
+ <a class="sub" href="#s2-2">顾客</a>
+ <a class="sub" href="#s2-3">竞争</a>
+ <a class="sub" href="#s2-4">公司与合作者</a>
+ <a class="sub" href="#s2-5">SWOT / TOWS</a>
+ <a href="#s3">③ STP</a>
+ <a href="#s4">④ 4P→7T</a>
+ <a class="sub" href="#s4-1">产品</a><a class="sub" href="#s4-2">服务</a><a class="sub" href="#s4-3">品牌</a><a class="sub" href="#s4-4">价格</a><a class="sub" href="#s4-5">激励</a><a class="sub" href="#s4-6">沟通</a><a class="sub" href="#s4-7">分销</a>
+ <a href="#s5">⑤ 顾客旅程与数据</a>
+ <a href="#s6">⑥ 进入与本地化、合规</a>
+ <a href="#s7">⑦ 执行</a>
+ <a class="sub" href="#s7-1">路线图</a><a class="sub" href="#s7-2">活动日历</a><a class="sub" href="#s7-3">组织与 RACI</a><a class="sub" href="#s7-4">预算排期</a>
+ <a href="#s8">⑧ 测量与控制</a>
+ <a href="#s9">⑨ 测试与迭代</a>
+ <a href="#s10">G-STIC 行动计划</a>
+ <a href="#s11">风险与应对</a>
+ <a href="#appendix">附录：数据来源</a>
+</nav>
+
+<main>
+<!-- ================= 执行摘要 ================= -->
+<section id="s0">
+ <h2><span class="n">◆</span>执行摘要</h2>
+ <p class="lead">预算 <b class="dyn" data-v="B">$100,000</b> 的首年计划。目标不是“打响全美知名度”，而是<b>用最少的钱验证三件事：谁买、买什么、花多少钱能买到一个顾客</b>，验证通过就逐步追加预算。</p>
+ <table>
+  <tr><th style="width:120px">项目</th><th>结论</th></tr>
+  <tr><td><b>机会</b></td><td>培育钻已占美国钻石需求价值的 25%，获取率 9%，与天然钻持平 <span class="src">S1</span>；在新增的珠宝估价中占 47%（2026），耳饰从 2019 年的 6% 升至 2025 年的 39% <span class="src">S47 BriteCo</span>。“lab grown diamond”搜索兴趣 2021→2025 涨约 5.6 倍 <span class="src">S18</span>。批发价已低于 $100/克拉 <span class="src">S1</span>，<b>“比天然钻便宜”已经不能成为差异点，品牌、设计和服务可以</b>。</td></tr>
+  <tr><td><b>打谁</b></td><td>主攻 25–40 岁都市职业女性，为日常佩戴自购 $300–900 的耳钉、项链、手链；第二目标是节日季为她买礼物的伴侣和家人。婚戒只做小量定制询单测试，<b>不打婚戒价格战</b>（搜索前排已被 Grown Brilliance、MiaDonna、Plum 等占据 <span class="src">S45</span>）。</td></tr>
+  <tr><td><b>定位</b></td><td>“<b>Everyday Brilliance — 为每一天而生的真钻</b>”：钻石由自有工厂培育、每颗可溯源，款式适合日常叠戴，并提供<b>价格保障与做工保障</b>。做工保障针对竞品差评集中的“掉钻、断链、退款慢” <span class="src">S38</span><span class="src">S39</span>。</td></tr>
+  <tr><td><b>怎么卖</b></td><td>以 DTC 官网（Shopify）为核心，TikTok Shop 达人分销按佣金结算、零前期投入；年度预算约 40% 集中在 Q4 <span class="src">S32 季节指数 11–12 月为平时 2–2.5 倍</span>。投放先集中在纽约、洛杉矶、旧金山三个都市圈，以提高触达密度。</td></tr>
+  <tr><td><b>首年目标</b></td><td>新客 <b class="dyn" data-v="newC" data-f="int">—</b>；收入 <b class="dyn" data-v="rev">—</b>；MER <b class="dyn" data-v="mer" data-f="x">—</b>；全成本 CAC <b class="dyn" data-v="cacFull">—</b>；扣营销后贡献 <b class="dyn" data-v="contribAfter">—</b>（不含人员和固定费用）。</td></tr>
+  <tr><td><b>预算怎么花</b></td><td>付费社媒 <b class="dyn" data-v="it_social">—</b>、搜索与购物广告 <b class="dyn" data-v="it_search">—</b>、达人与 UGC <b class="dyn" data-v="it_infl">—</b>；创意、PR/SEO/GEO、CRM、调研、激励各占一小块；另留机动金 <b class="dyn" data-v="it_reserve">—</b>，<b>只在软启动达标后放出</b>。</td></tr>
+  <tr><td><b>怎么控</b></td><td>每周看 CAC、ROAS、转化；每月按边际 CAC 调预算（单次调仓 ≤ 总预算 15%）；每季度做一次增量测试和品牌追踪；设 4 道“阶段闸门”，未达标就不加码。</td></tr>
+  <tr><td><b>需要决策</b></td><td>① 批准 <span class="dyn" data-v="B">—</span> 营销预算及闸门规则；② 确定品牌名并做商标检索；③ 提供含关税的到岸成本；④ 批准美国 2 人精简团队与外包方案；⑤ 首批 30 个 SKU 的样品与库存（不在营销预算内）。</td></tr>
+ </table>
+ <div class="note">口径：本预算只含营销费用（媒体、达人、创意、PR/SEO、CRM 工具、调研、消费者激励、机动），<b>不含</b>人员工资、库存、建站、样品、仓储物流。凡标<span class="pill p-a">假设</span>的数字没有直接数据支撑，需在软启动中验证。</div>
+</section>
+
+<!-- ================= 预算控制台 ================= -->
+<section id="budget">
+ <h2><span class="n">★</span>年度营销预算控制台</h2>
+ <p class="lead">可以调整总预算、各科目占比和模型假设，全文所有相关金额、目标和图表会同步重算。占比合计不等于 100% 时会提示，可点“按比例归一”修正。</p>
+ <div class="grid2">
+  <div>
+   <table class="alloc" id="allocTbl">
+    <thead><tr><th>预算科目</th><th class="r">占比 %</th><th class="r">金额</th><th>占比</th></tr></thead>
+    <tbody></tbody>
+    <tfoot><tr><td>合计</td><td class="r" id="pctSum">100</td><td class="r" data-v="allocSum">—</td><td><button class="btn" id="normBtn">按比例归一</button> <button class="btn" id="resetBtn">恢复默认</button></td></tr></tfoot>
+   </table>
+   <div id="pctWarn" class="warn" style="display:none"></div>
+  </div>
+  <div>
+   <div class="chart" id="donut"></div>
+   <div class="legend" id="donutLegend"></div>
+  </div>
+ </div>
+ <h4>模型假设（可改）</h4>
+ <div class="assump">
+  <div><label>首单客单价 AOV（$）</label><input data-a="aov" type="number" step="10"></div>
+  <div><label>基准媒体 CAC（$，预算 10 万时）</label><input data-a="cac" type="number" step="5"></div>
+  <div><label>CAC 规模弹性（预算翻倍 CAC 上升比例）</label><input data-a="el" type="number" step="0.01"></div>
+  <div><label>自然/推荐新客加成</label><input data-a="org" type="number" step="0.01"></div>
+  <div><label>12 个月复购率</label><input data-a="rep" type="number" step="0.01"></div>
+  <div><label>产品毛利率（含关税）</label><input data-a="gm" type="number" step="0.01"></div>
+  <div><label>变动费用率（运费/支付/退货）</label><input data-a="vc" type="number" step="0.01"></div>
+  <div><label>月固定费用（人员等，$）</label><input data-a="fixed" type="number" step="1000"></div>
+ </div>
+ <div class="note">假设依据：AOV $380 参考 Google Shopping 培育钻耳钉中位 $452、项链中位 $565 <span class="src">S46</span>，以及珠宝电商 AOV $337 <span class="src">S49 WisePIM</span>；基准 CAC $160 参考 DTC 高级珠宝付费 CAC $70–180 <span class="src">S49 Eightx</span>，新品牌冷启动按偏高取值；毛利 68% 参考 DTC 高级珠宝 55–75% <span class="src">S49</span>；复购 15% 参考珠宝顾客一年内回购 28% <span class="src">S49 cufinder</span>，按首年获客时间分布打折；规模弹性 0.15 表示预算翻倍时 CAC 约上升 11%（边际递减）<span class="pill p-a">假设</span>。</div>
+
+ <h4>不同预算下的结果（边际递减）</h4>
+ <table id="scenTbl"><thead><tr><th>预算</th><th class="r">媒体 CAC</th><th class="r">新客</th><th class="r">收入</th><th class="r">MER</th><th class="r">扣营销后贡献</th><th class="r">扣固定费用后</th></tr></thead><tbody></tbody></table>
+ <div class="note">看法：预算越大，单个新客越贵、MER 越低；在默认假设下，预算超过约 20 万后扣营销后贡献开始转负。所以要先按闸门证明 CAC、AOV 和复购达标（把实测值填进上方假设），再追加预算；不要一开始就把钱全投出去。扣固定费用后为负，说明首年是“验证期”，盈亏平衡依赖第二年的复购和规模。</div>
+</section>
+
+<!-- ================= ① 目标 ================= -->
+<section id="s1">
+ <h2><span class="n">①</span>目标与市场规模（G-STIC 的 G）</h2>
+ <p class="lead">先确定可以拿下的市场有多大，再定财务目标、营销目标和沟通目标；用目标任务法自下而上算预算，再用 <span class="dyn" data-v="B">—</span> 的上限自上而下校验。</p>
+
+ <h3 id="s1-1">1.1 市场规模（TAM / SAM / SOM）</h3>
+ <table>
+  <tr><th>层级</th><th>口径</th><th>估算</th><th>依据与证据等级</th></tr>
+  <tr><td><b>TAM</b> 总体市场</td><td>美国培育钻（含婚戒与时尚首饰）零售额</td><td><b>约 $100–220 亿</b>（口径冲突）</td><td><span class="pill p-c">数据冲突</span> Custom Market Insights 估 2025 年美国培育钻市场 $217.6 亿 <span class="src">S47</span>（营销型报告，可能含批发和工业用途）；De Beers 称培育钻占美国钻石需求价值 25% <span class="src">S1</span>。两者口径不同，只作量级参考，<b>不作为预算依据</b>。</td></tr>
+  <tr><td><b>SAM</b> 可服务市场</td><td>线上购买的非婚戒培育钻首饰，单价 $200–1,500，女性自购 + 送礼</td><td>约占 TAM 的 10–15%，即 <b>约 $10–30 亿</b></td><td><span class="pill p-a">假设</span>：非婚戒 = 送礼 44% + 自购 31%（天然钻口径）<span class="src">S1</span>；培育钻均价 $2,786，48% 低于 $1,000 <span class="src">S1</span>；线上渗透率需购买报告核实。</td></tr>
+  <tr><td><b>SOM</b> 可获得份额</td><td>首年按预算和渠道能拿到的收入</td><td><b class="dyn" data-v="rev">—</b>（约占 SAM 的 <span class="dyn" data-v="somPct" data-f="pct3">—</span>）</td><td>由下文单客经济模型算出。份额极小，说明首年的瓶颈是预算和品牌认知，不是市场容量。</td></tr>
+ </table>
+ <div class="note">规模趋势的两层互证：De Beers 报告 <span class="src">S1</span>（A 层，天然钻立场）与 Google Trends 5 年搜索 <span class="src">S18</span>（B 层）方向一致，需求持续增长。“每 10 枚订婚戒中 6 枚是培育钻”来自 The Knot 2026 <span class="src">S4</span><span class="src">S47</span>。</div>
+
+ <h3 id="s1-2">1.2 目标体系（SMART）</h3>
+ <table>
+  <tr><th>层级</th><th>目标</th><th>基准</th><th>截止</th><th>衡量</th></tr>
+  <tr><td>财务</td><td>收入 <b class="dyn" data-v="rev">—</b>；扣营销后贡献 <b class="dyn" data-v="contribAfter">—</b></td><td>0（新品牌）</td><td>2027-12-31</td><td>Shopify + 财务月报</td></tr>
+  <tr><td>财务</td><td>MER ≥ <b>2.0</b>；Q4 单季 MER ≥ 2.5</td><td>—</td><td>每季度</td><td>收入 ÷ 营销费用</td></tr>
+  <tr><td>营销</td><td>新客 <b class="dyn" data-v="newC" data-f="int">—</b>；12 个月复购率 ≥ 15%</td><td>0</td><td>2027-12-31</td><td>Shopify 客户报表</td></tr>
+  <tr><td>营销</td><td>全成本 CAC ≤ <b class="dyn" data-v="cacFull">—</b>；媒体 CAC ≤ <b class="dyn" data-v="cacMedia">—</b></td><td>行业付费 CAC $70–180 <span class="src">S49</span></td><td>每月</td><td>营销费用 ÷ 新客</td></tr>
+  <tr><td>营销</td><td>会员/邮件订阅 <b class="dyn" data-v="subs" data-f="int">—</b></td><td>0</td><td>2027-12-31</td><td>Klaviyo</td></tr>
+  <tr><td>沟通</td><td>重点都市圈（NYC/LA/SF）目标人群提示知名度 ≥ 2%；品牌搜索量月均 ≥ 1,000 次</td><td>0</td><td>2027-12-31</td><td>季度品牌追踪问卷、Search Console</td></tr>
+  <tr><td>沟通</td><td>评价 ≥ 300 条、均分 ≥ 4.6；差评中“做工/售后”占比低于竞品（47.5%）<span class="src">S38</span></td><td>0</td><td>2027-12-31</td><td>Okendo / Trustpilot</td></tr>
+ </table>
+
+ <h3 id="s1-3">1.3 单客经济与盈亏平衡</h3>
+ <div class="grid3">
+  <div class="card"><h4>每单贡献</h4>AOV <b data-v="aov">—</b> × (毛利 <span data-v="gm" data-f="pct">—</span> − 变动费用 <span data-v="vc" data-f="pct">—</span>) = <b class="dyn" data-v="unitContrib">—</b></div>
+  <div class="card"><h4>首单是否回本</h4>全成本 CAC <b class="dyn" data-v="cacFull">—</b> vs 每单贡献 <b class="dyn" data-v="unitContrib">—</b> → <b data-v="payback1" data-f="txt">—</b></div>
+  <div class="card"><h4>24 个月 LTV / CAC</h4>LTV（贡献口径，24 个月 1.4 单）<b class="dyn" data-v="ltv">—</b> ÷ CAC = <b class="dyn" data-v="ltvcac" data-f="x">—</b>（行业健康线 3:1 <span class="src">S49</span>）</div>
+ </div>
+ <table>
+  <tr><th>指标</th><th class="r">数值</th><th>计算</th></tr>
+  <tr><td>获客投放池（社媒 + 搜索 + 达人）</td><td class="r dyn" data-v="pool">—</td><td>三项预算之和</td></tr>
+  <tr><td>媒体 CAC（含规模递减）</td><td class="r dyn" data-v="cacMedia">—</td><td>基准 CAC × (预算 ÷ 10 万)<sup>弹性</sup></td></tr>
+  <tr><td>付费新客</td><td class="r dyn" data-v="paidC" data-f="int">—</td><td>投放池 ÷ 媒体 CAC</td></tr>
+  <tr><td>总新客</td><td class="r dyn" data-v="newC" data-f="int">—</td><td>付费新客 × (1 + 自然/推荐加成)</td></tr>
+  <tr><td>订单</td><td class="r dyn" data-v="orders" data-f="int">—</td><td>新客 × (1 + 复购率)</td></tr>
+  <tr><td>收入</td><td class="r dyn" data-v="rev">—</td><td>订单 × AOV</td></tr>
+  <tr><td>营销前贡献</td><td class="r dyn" data-v="contrib">—</td><td>收入 × (毛利 − 变动费用)</td></tr>
+  <tr><td>营销费用</td><td class="r dyn" data-v="B">—</td><td></td></tr>
+  <tr><td><b>扣营销后贡献</b></td><td class="r dyn" data-v="contribAfter">—</td><td></td></tr>
+  <tr><td>年固定费用（人员、工具外的运营）</td><td class="r dyn" data-v="fixedY">—</td><td>月固定费用 × 12（可在控制台修改）</td></tr>
+  <tr><td><b>经营结果（扣固定费用后）</b></td><td class="r dyn" data-v="opResult">—</td><td></td></tr>
+  <tr><td>盈亏平衡订单数（覆盖营销 + 固定费用）</td><td class="r dyn" data-v="beOrders" data-f="int">—</td><td>(营销 + 固定) ÷ 每单贡献</td></tr>
+ </table>
+ <div class="note"><b>上下结合</b>：自下而上用漏斗测算（见 4.6 沟通预算）得到付费新客 <span class="dyn" data-v="funnelOrders" data-f="int">—</span>，自上而下用 CAC 模型得到 <span class="dyn" data-v="paidC" data-f="int">—</span>，相差 <span data-v="gapPct" data-f="pct">—</span>。差距在 ±25% 以内即视为一致；超出时以软启动实测数据为准，提交月度预算会决策。</div>
+</section>
+
+<!-- ================= ② 5C ================= -->
+<section id="s2">
+ <h2><span class="n">②</span>5C 分析：环境、行业、顾客、竞争、公司与合作者</h2>
+ <p class="lead">外部机会和威胁来自环境、行业、顾客、竞争分析，内部优势和劣势来自公司分析，最后汇总成 SWOT/TOWS，作为 STP 与 7T 的输入。</p>
+
+ <h3 id="s2-1">2.1 宏观环境（PESTEL）与行业趋势</h3>
+ <table>
+  <tr><th>维度</th><th>现状</th><th>对我们的影响</th><th>来源</th></tr>
+  <tr><td>政治/贸易</td><td>2026-07 美国新一轮关税把钻石和宝石纳入，对 60 国宝石首饰征 10% 或 12.5%；对华税率更高；美印协议后印度宝石 0%、首饰 18%</td><td>中国直出的成本优势被削弱 → 测算到岸价，评估在泰国/越南镶嵌；定价预留 5% 缓冲</td><td><span class="src">S20</span><span class="src">S22</span><span class="src">S51</span></td></tr>
+  <tr><td>法规</td><td>FTC 珠宝指南（16 CFR 23）要求清楚标注 “laboratory-grown”；代言指南要求达人披露合作</td><td>所有素材、达人内容必须过合规清单</td><td><span class="src">S17</span><span class="src">S19</span></td></tr>
+  <tr><td>经济</td><td>金价高企，轻奢品牌承压；Mastercard 预计 2026 假日零售 +5.5%</td><td>14K 金 + 925 银镀金双材质控制价格；Q4 仍是主战场</td><td><span class="src">S14</span><span class="src">S30</span></td></tr>
+  <tr><td>社会</td><td>千禧一代贡献 55% 需求价值、Z 世代 23%；送礼 44%、自购 31%</td><td>非婚戒日常首饰空间大</td><td><span class="src">S1</span></td></tr>
+  <tr><td>技术</td><td>中国 CVD/HPHT 产能大，厂商转向 AI/芯片散热，毛坯价 2026-11 年内第二次上涨约 10%；GIA 调整培育钻证书</td><td>成本有底；“科技感”要讲具体（色级、净度、生长记录）</td><td><span class="src">S21</span><span class="src">S24</span></td></tr>
+  <tr><td>环境</td><td>Pandora 推碳足迹标签，被天然钻协会反击</td><td>环保宣称必须有第三方数据，没有就不说</td><td><span class="src">S11</span><span class="src">S16</span></td></tr>
+ </table>
+ <h4>行业趋势（5 条）</h4>
+ <ol class="tight">
+  <li><b>渗透率上升</b>：培育钻在新增估价中占 47%（2026），耳饰从 6% 升至 39% <span class="src">S47 BriteCo</span>；订婚戒约 6 成 <span class="src">S4</span>。</li>
+  <li><b>价格通缩</b>：批发价持续下跌，零售加价约 10 倍，预计会被压缩 <span class="src">S1</span><span class="src">S7</span>。靠克拉和低价竞争会被拖进价格战。</li>
+  <li><b>从婚戒转向时尚首饰</b>：Signet 靠培育钻时尚首饰拉动销售 +6% <span class="src">S9</span>；耳钉、网球手链、项链搜索增长快，季节性强 <span class="src">S32</span>。</li>
+  <li><b>渠道变化</b>：TikTok 直播“拆钻石”爆红 <span class="src">S13</span>；Signet 关闭纯线上的 James Allen <span class="src">S9</span>；Google Shopping 前排卖家是 Kay、Macy's、Helzberg 等连锁 <span class="src">S46</span>。</li>
+  <li><b>天然钻阵营反击</b>：Diamond Collective（原 NDC）、De Beers 主打“稀缺、可传承”，媒体集中报道培育钻“没有转售价值” <span class="src">S15</span><span class="src">S16</span>。</li>
+ </ol>
+
+ <h3 id="s2-2">2.2 顾客分析（动机、感知、决策过程）</h3>
+ <div class="grid3">
+  <div class="card"><h4>文化与社会因素</h4>真钻象征“值得”；但 Reddit 高赞帖反映线下社交认可存疑：“别人对培育钻反应不一样、会尴尬” <span class="src">S40</span>。参考群体（闺蜜、伴侣）的态度会影响购买。</div>
+  <div class="card"><h4>个人因素与动机</h4>25–40 岁、收入 $75k–150k、职业女性；动机是自我奖励（尊重需求）和日常美感；送礼者的动机是“不出错又显心意”。主要购买动机是价格 <span class="src">S1</span>。</div>
+  <div class="card"><h4>感知与顾虑</h4>选择性注意集中在价格和真假：YouTube 内容 62.5% 涉及真假鉴别 <span class="src">S42</span>；搜索“People Also Ask”中出现“Why do jewelers hate lab-grown diamonds?”“What is the downside?” <span class="src">S45</span>。</div>
+ </div>
+ <table>
+  <tr><th>决策阶段</th><th>行为证据</th><th>我们的触点</th></tr>
+  <tr><td>问题识别</td><td>节日、升职、生日；11–12 月搜索为平时的 2–2.5 倍 <span class="src">S32</span></td><td>TikTok/IG 达人内容、Meta 信息流</td></tr>
+  <tr><td>信息搜索</td><td>搜 “lab grown diamond earrings / worth it / how much should cost” <span class="src">S45</span>；Forbes “Best lab-grown … 2026” 评测排在前 5 <span class="src">S45</span></td><td>SEO 长尾内容、GEO、争取进入媒体评测、搜索广告</td></tr>
+  <tr><td>方案评估</td><td>比价、看证书、看评价；Trustpilot 竞品差评集中在做工与售后 <span class="src">S38</span></td><td>价格对比、IGI 证书、做工保障、评价展示</td></tr>
+  <tr><td>购买决策</td><td>他人态度、促销时机；珠宝转化率仅 0.87–1.19%，弃购率 81% <span class="src">S49</span></td><td>分期付款、礼盒、准时送达保证、弃购召回</td></tr>
+  <tr><td>购后行为</td><td>担心掉钻断链、担心贬值；一年内回购 28% <span class="src">S49</span></td><td>开箱体验、保养提醒、晒单奖励、升级换购</td></tr>
+ </table>
+ <div class="note">介入程度：$300–900 的时尚首饰属中等介入，消费者多凭品牌、评价、达人等经验线索做决定；婚戒属高介入，需要顾问式服务。</div>
+
+ <h3 id="s2-3">2.3 竞争分析</h3>
+ <table>
+  <tr><th>竞品</th><th>定位</th><th>价格信号</th><th>搜索可见度 <span class="src">S45</span></th><th>弱点</th><th>对我们的意义</th></tr>
+  <tr><td>Grown Brilliance</td><td>培育钻全品类 DTC</td><td>中低</td><td><b>5 个词中 4 个排第 1–3</b></td><td>品牌个性弱</td><td>SEO 标杆，研究其品类页结构</td></tr>
+  <tr><td>Ring Concierge</td><td>纽约时尚高级珠宝</td><td>裸钻中位 $3,752 <span class="src">P1</span></td><td>3 个词前 2</td><td>价格高</td><td>“纽约日常奢华”风格参照</td></tr>
+  <tr><td>Mejuri</td><td>日常高级首饰</td><td>耳饰 $349、戒指 $898 <span class="src">P1</span></td><td>上升搜索词 <span class="src">S32</span></td><td>差评中做工与售后多 <span class="src">S38</span>；被报道“失去光泽” <span class="src">S30</span></td><td><b>品类参照</b>：抢“日常高级”心智</td></tr>
+  <tr><td>VRAI</td><td>自种钻、可持续</td><td>耳饰 $885、项链 $600 <span class="src">P1</span></td><td>Shopping 出现 <span class="src">S46</span></td><td>价格高、客服差评 <span class="src">S38</span></td><td><b>最近的对标</b>：同样讲自种，更亲民</td></tr>
+  <tr><td>Brilliant Earth</td><td>道德/高端 + 展厅</td><td>婚戒为主</td><td>品牌词第 1</td><td>“3 年掉 4 颗钻”、送货慢 <span class="src">S39</span></td><td>不正面竞争婚戒</td></tr>
+  <tr><td>Kay / Zales / Helzberg（连锁）</td><td>大众连锁</td><td>Shopping 卖家数第 1、3、7 <span class="src">S46</span>；Banter 耳钉 “under $150” <span class="src">S43</span></td><td>Shopping 主导</td><td>品牌老化</td><td>Shopping 广告要避开低价款硬拼</td></tr>
+  <tr><td>Pandora / Quince / gorjana</td><td>平价时尚</td><td>Quince、gorjana 在 Shopping 出现 <span class="src">S46</span></td><td>—</td><td>Pandora 培育钻销售下滑 <span class="src">S11</span></td><td>底价参照</td></tr>
+ </table>
+ <div class="note">Meta 广告库 20 条在投广告的主流说法是“identical brilliance… incredible value”“40% OFF”“天然还是培育由你选” <span class="src">S43</span>，同质化严重，我们的区隔见 4.6 创意策略。</div>
+
+ <h3 id="s2-4">2.4 公司与合作者分析</h3>
+ <div class="grid2">
+  <div class="card"><h4>公司（资源与能力，VRIO）</h4>
+   <ul class="tight">
+    <li><b>自有种钻工厂</b>：成本低、可定制尺寸和颜色、可溯源 → 有价值、较稀缺（多数 DTC 品牌外采），<b>可形成持续优势</b></li>
+    <li>供应稳定，可小批量快速出新款（7–14 天）<span class="pill p-a">假设</span></li>
+    <li>劣势：美国无品牌、无本地团队、缺少美国消费者洞察；营销预算仅 <span class="dyn" data-v="B">—</span></li>
+    <li>约束：预算上限；要求 18 个月内回本 <span class="pill p-a">假设</span>；合规（FTC、UFLPA）</li>
+   </ul></div>
+  <div class="card"><h4>合作者地图</h4>
+   <table>
+    <tr><th>角色</th><th>候选</th><th>关注点</th></tr>
+    <tr><td>电商平台</td><td>Shopify、TikTok Shop</td><td>费率、联盟佣金 15–20% <span class="pill p-a">假设</span></td></tr>
+    <tr><td>3PL 仓储</td><td>美国东部珠宝专业 3PL</td><td>保险、2 日达</td></tr>
+    <tr><td>支付分期</td><td>Klarna / Affirm / Shop Pay</td><td>提升 $500+ 转化</td></tr>
+    <tr><td>认证</td><td>IGI / GIA</td><td>GIA 证书新规 <span class="src">S21</span></td></tr>
+    <tr><td>报关</td><td>持牌报关行</td><td>HTS 7113、7104；UFLPA 文件</td></tr>
+    <tr><td>关系风险</td><td>现有 B2B 客户</td><td>DTC 与批发客户价格冲突 → 不同款式、统一 MAP</td></tr>
+   </table></div>
+ </div>
+
+ <h3 id="s2-5">2.5 SWOT 与 TOWS</h3>
+ <div class="grid2">
+  <div class="card"><h4 style="color:var(--green)">S 优势</h4>自有工厂（成本、溯源、定制）；快速出新款；有能力提供价格保障</div>
+  <div class="card"><h4 style="color:var(--red)">W 劣势</h4>品牌零认知；预算小；无美国团队；中国产地信任问题</div>
+  <div class="card"><h4 style="color:var(--blue)">O 机会</h4>时尚线增长快且季节性强；TikTok Shop 达人分销按佣金结算；竞品售后口碑差；AI 搜索（GEO）尚未被占领</div>
+  <div class="card"><h4 style="color:var(--amber)">T 威胁</h4>价格战；关税；“不保值”舆论；连锁在 Shopping 上主导；天然钻阵营反击</div>
+ </div>
+ <table>
+  <tr><th>策略</th><th>内容</th></tr>
+  <tr><td><b>SO</b>（用优势抓机会）</td><td>以“自己种 + 可溯源 + 日常叠戴”切入时尚线；用工厂生长视频做 TikTok 内容</td></tr>
+  <tr><td><b>WO</b>（用机会补劣势）</td><td>用 TikTok 联盟（按佣金结算）和赠品种草替代昂贵的品牌广告；集中三个都市圈</td></tr>
+  <tr><td><b>ST</b>（用优势挡威胁）</td><td>价格保障 + 终身升级抵消“不保值”；做工保障打竞品差评痛点</td></tr>
+  <tr><td><b>WT</b>（减劣势避威胁）</td><td>第三地镶嵌和 UFLPA 文件提前准备；不进 Shopping 低价区间硬拼</td></tr>
+ </table>
+</section>
+
+<!-- ================= ③ STP ================= -->
+<section id="s3">
+ <h2><span class="n">③</span>STP：细分、目标市场、定位</h2>
+ <h3>3.1 市场细分（人口 × 地理 × 行为 × 心理）</h3>
+ <table>
+  <tr><th>细分</th><th>描述</th><th>规模信号</th><th>价格带</th><th>竞争强度</th></tr>
+  <tr><td>A 自购日常派</td><td>25–40 岁职业女性，叠戴、自我奖励</td><td>自购 31% <span class="src">S1</span>；Mejuri 是上升搜索词 <span class="src">S32</span></td><td>$300–900</td><td>中</td></tr>
+  <tr><td>B 节日送礼者</td><td>伴侣、家人（含男性）</td><td>送礼 44% <span class="src">S1</span>；Q4 搜索峰值 <span class="src">S32</span></td><td>$200–800</td><td>高（Q4）</td></tr>
+  <tr><td>C 理性求婚者</td><td>25–35 岁情侣，追求大克拉</td><td>婚戒约 6 成为培育钻 <span class="src">S4</span></td><td>$1,500–5,000</td><td><b>很高</b>（S45 前排均为婚戒专家）</td></tr>
+  <tr><td>D 收藏/彩钻</td><td>彩钻、异形、定制</td><td>Reddit 彩钻/异形 401 帖 <span class="src">P2</span></td><td>$800+</td><td>低</td></tr>
+  <tr><td>E 低价尝鲜</td><td>直播拆钻、低价</td><td>TikTok 爆红 <span class="src">S13</span></td><td>&lt;$200</td><td>高，利润薄</td></tr>
+ </table>
+ <h3>3.2 目标市场选择</h3>
+ <table>
+  <tr><th>细分</th><th>货币价值</th><th>社会价值</th><th>规模价值</th><th>信息价值</th><th>与公司匹配</th><th>结论</th></tr>
+  <tr><td>A 自购日常派</td><td>中高，复购高</td><td>高（晒图、叠戴）</td><td>高</td><td>高</td><td>高</td><td><b>主目标</b></td></tr>
+  <tr><td>B 节日送礼者</td><td>高（Q4）</td><td>中</td><td>高</td><td>低</td><td>高</td><td><b>次目标（季节）</b></td></tr>
+  <tr><td>C 理性求婚者</td><td>单价高、复购低</td><td>高</td><td>中</td><td>中</td><td>中</td><td>只做定制询单测试，预算 ≤ 5%</td></tr>
+  <tr><td>D 收藏/彩钻</td><td>中</td><td>中</td><td>低</td><td>高</td><td>高（可定制）</td><td>做口碑款</td></tr>
+  <tr><td>E 低价尝鲜</td><td>低</td><td>中</td><td>中</td><td>低</td><td>低</td><td>放弃</td></tr>
+ </table>
+ <p><b>战术目标市场（有效性 vs 成本效益）</b>：预算只有 <span class="dyn" data-v="B">—</span>，付费社媒只投<b>纽约、洛杉矶、旧金山湾区三个都市圈</b>（培育钻兴趣高、收入集中 <span class="src">S31</span>），保证足够的触达频次；搜索广告和 SEO 面向全美，只承接有明确购买意图的需求。</p>
+ <div class="card gold"><h4>主画像：Maya，31 岁，纽约，市场经理，年收入 $95k</h4>每天戴耳钉和细项链；刷 TikTok、IG，买东西前看 Reddit 和 Trustpilot；升职或生日时花 $300–800 奖励自己；担心“培育钻是不是假的、会不会贬值、戴两次会不会断”。</div>
+ <h3>3.3 证据分级与待验证假设</h3>
+ <p>标注规则：<span class="pill p-d">数据</span>附来源编号｜<span class="pill p-c">数据冲突</span>写明各自口径｜<span class="pill p-a">假设</span>没有数据，需验证。三角验证：每条关键结论至少有两类来源；只有一类来源时会在文中说明。细分规模用二手数据 + 公开行为数据替代一手调研；软启动中用 $<span data-v="it_research" data-f="raw">—</span> 调研预算做 300 份快速问卷（含 Van Westendorp 价格敏感度）。</p>
+ <h3>3.4 定位</h3>
+ <table>
+  <tr><th>属性/利益</th><th>重要性</th><th>LUMORA</th><th>Mejuri</th><th>VRAI</th><th>连锁（Kay/Zales）</th></tr>
+  <tr><td>真钻 + 证书</td><td>高</td><td>强（IGI）</td><td>弱</td><td>强</td><td>中</td></tr>
+  <tr><td>适合日常叠戴的设计</td><td>高</td><td>强</td><td>强</td><td>中</td><td>弱</td></tr>
+  <tr><td>价格合理透明</td><td>高</td><td>强</td><td>中</td><td>弱</td><td>中（常打折）</td></tr>
+  <tr><td>做工与售后</td><td>高</td><td>强（做工保障）</td><td>弱 <span class="src">S38</span></td><td>弱 <span class="src">S38</span></td><td>中</td></tr>
+  <tr><td>不担心贬值</td><td>中高</td><td>强（价格保障 + 升级）</td><td>—</td><td>中</td><td>弱</td></tr>
+  <tr><td>品牌知名度</td><td>中</td><td>弱</td><td>强</td><td>中</td><td>强</td></tr>
+ </table>
+ <div class="grid2">
+  <div class="card"><h4>参照系、共同点与差异点</h4>
+   参照系：<b>日常高级首饰</b>（对标 Mejuri），不是“便宜钻石”。<br>
+   共同点：真钻、IGI 证书、14K 金、免费退换、日常可戴、价格不高于 Mejuri。<br>
+   差异点：① <b>自己种的钻</b>，每颗编号可查生长记录；② <b>价格保障</b>：180 天内降价退差价，终身 100% 抵扣升级；③ <b>做工保障</b>：终身免费紧镶，首年掉钻免费补，退款 24 小时内书面确认。</div>
+  <div class="card"><h4>化解相互冲突的利益</h4>
+   “便宜 = 不值钱” → 用价格保障和终身升级，把贬值风险留给品牌承担。<br>
+   “中国制造 = 不可靠” → 讲工厂与科技，公开生长视频与证书；H7 测试产地信息是否影响转化。<br>
+   “培育钻 = 假的” → 测钻笔演示 + 证书扫码 + 30 天佩戴实测。</div>
+ </div>
+ <div class="note"><b>品牌声明</b>：对于想每天都戴真钻的都市职业女性，LUMORA 是日常高级首饰品牌，用自己种的、可溯源的钻石，做适合叠戴的设计；与其他品牌不同，我们承诺价格透明、降价退差价，并对做工终身负责。</div>
+</section>
+
+<!-- ================= ④ 7T ================= -->
+<section id="s4">
+ <h2><span class="n">④</span>4P → 7T 营销组合</h2>
+ <p class="lead">产品、服务、品牌、价格、激励、沟通、分销七项。预算小时，每一项都要回答：这项开支能不能直接帮我们验证假设或获得顾客？</p>
+
+ <h3 id="s4-1">4.1 产品策略</h3>
+ <table>
+  <tr><th>系列</th><th>角色</th><th>代表品</th><th>价格带</th><th>首批 SKU</th><th>经营线</th></tr>
+  <tr><td>Everyday 耳饰</td><td>引流款 + 复购入口</td><td>0.5ct / 1ct 总重四爪耳钉、小耳环</td><td>$295–695</td><td>8</td><td>时尚线</td></tr>
+  <tr><td>Everyday 项链</td><td>利润款</td><td>单钻吊坠 0.25–0.5ct、小链叠戴</td><td>$350–790</td><td>7</td><td>时尚线</td></tr>
+  <tr><td>Everyday 手链</td><td>利润款 + 节日爆款</td><td>细网球手链 2ct</td><td>$890–1,290</td><td>4</td><td>时尚线</td></tr>
+  <tr><td>Stack 叠戴戒</td><td>新增长点</td><td>半永恒戒、细戒</td><td>$390–890</td><td>6</td><td>时尚线</td></tr>
+  <tr><td>Color 彩钻</td><td>形象款</td><td>粉钻、黄钻小克拉</td><td>$450–990</td><td>3</td><td>时尚线</td></tr>
+  <tr><td>Bridal 定制</td><td>测试</td><td>椭圆/圆形 1–2ct 按单定制</td><td>$1,600–3,200</td><td>2 款（按单生产）</td><td>婚戒线</td></tr>
+ </table>
+ <ul class="tight">
+  <li><b>选品依据</b>：需求证据为耳钉、网球手链、项链搜索增长与季节性 <span class="src">S32</span>；竞品价格带为 Shopping 耳钉中位 $452、项链 $565、手链 $1,950 <span class="src">S46</span>；供给约束：只上 3 克拉以下款（3 克拉是销量拐点 <span class="src">S1</span>）。</li>
+  <li><b>上新节奏</b>：首批 30 个 SKU，每款首单 20–50 件；每季上新 4–6 款，并用限量款试水（预售 ≥ 30 单再量产）。</li>
+  <li><b>淘汰规则</b>：每季度按销量、毛利、退货率排序，后 20% 下架；退货率 &gt; 15% 的款式立即复查。</li>
+  <li><b>质量标准</b>：四爪以上镶口；链子 10 磅拉力测试；出厂前 100% 紧镶检查。</li>
+ </ul>
+
+ <h3 id="s4-2">4.2 服务策略</h3>
+ <table>
+  <tr><th>顾客顾虑</th><th>服务承诺</th><th>SERVQUAL 维度</th><th>证据</th></tr>
+  <tr><td>怕买贵、怕降价</td><td>180 天价格保障：降价退差价</td><td>保证性</td><td>批发价下跌 <span class="src">S7</span></td></tr>
+  <tr><td>怕贬值、无法处置</td><td>终身 100% 抵扣升级</td><td>保证性</td><td>“没有转售价值” <span class="src">S15</span></td></tr>
+  <tr><td>怕掉钻断链</td><td>终身免费紧镶；首年掉钻免费补；链扣、耳堵首年免费换</td><td>可靠性</td><td>竞品差评 <span class="src">S38</span><span class="src">S39</span></td></tr>
+  <tr><td>怕退款没下文</td><td>30 天免费退换；退款 24 小时内邮件确认</td><td>响应性</td><td><span class="src">S38</span></td></tr>
+  <tr><td>怕是假的</td><td>IGI 证书 + 溯源卡（二维码查生长记录）</td><td>有形性</td><td><span class="src">S42</span></td></tr>
+  <tr><td>不会选</td><td>视频选购顾问（预约制）、叠戴搭配建议</td><td>移情性</td><td>BE 正面评价集中在顾问 <span class="src">S39</span></td></tr>
+ </table>
+ <p>价格保障按收入的 1% 计提储备，计入变动费用。</p>
+
+ <h3 id="s4-3">4.3 品牌策略</h3>
+ <div class="house">
+  <div class="roof">愿景：让真钻成为日常 ｜ 品牌精神：Everyday Brilliance</div>
+  <div class="row">
+   <div><b>自己种，看得见</b><br>工厂生长视频、每颗编号溯源</div>
+   <div><b>为每一天设计</b><br>0.1–1ct 日常克拉，适合叠戴</div>
+   <div><b>买得安心</b><br>价格保障、终身升级、做工保障</div>
+  </div>
+  <div class="base">个性：自信 · 真诚 · 懂行 · 不炫耀 ｜ 证明点：IGI 证书、溯源卡、耐久测试视频、保障条款原文</div>
+ </div>
+ <ul class="tight" style="margin-top:12px">
+  <li><b>品牌元素</b>：LUMORA 为暂定名，另备 2 个候选名，做 USPTO 商标检索；包装用香槟金礼盒 + 溯源卡。不用蓝盒，因为 Helzberg 广告主打“small blue boxes” <span class="src">S43</span>，且容易让人联想到 Tiffany。</li>
+  <li><b>品牌资产追踪</b>（CBBE）：每季度在三个都市圈做一次 300 人问卷，测知晓度、联想、偏好和推荐意愿，费用从调研预算 <span class="dyn" data-v="it_research">—</span> 中支出。</li>
+ </ul>
+
+ <h3 id="s4-4">4.4 价格策略</h3>
+ <ol class="tight">
+  <li><b>定价目标</b>：介于市场渗透和质量领先之间：比 VRAI 低 25–40%，与 Mejuri 同类持平或略低，不做最低价。</li>
+  <li><b>需求</b>：时尚线需求中等弹性；送礼需求对“准时送达 + 礼盒”的敏感度高于折扣 <span class="pill p-a">假设，H3 验证</span>。</li>
+  <li><b>成本</b>：批发价 &lt; $100/克拉 <span class="src">S1</span>；目标产品毛利 68%（含关税）<span class="pill p-a">待成本表</span>。</li>
+  <li><b>竞争价格</b>：Shopping 耳钉 P25–P75 为 $272–1,075，项链 $250–1,900，戒指 $1,560–3,999 <span class="src">S46</span>。</li>
+  <li><b>方法</b>：以顾客感知价值定价为主，用竞争定价校验；页面锚定“同款天然钻价格”。</li>
+ </ol>
+ <table>
+  <tr><th>款式</th><th class="r">LUMORA</th><th>Mejuri <span class="src">P1</span></th><th>VRAI <span class="src">P1</span></th><th>Shopping 中位 <span class="src">S46</span></th></tr>
+  <tr><td>0.5ct 总重耳钉 14K</td><td class="r">$395</td><td>$349–598</td><td>$550–885</td><td>耳钉 $452</td></tr>
+  <tr><td>1ct 总重耳钉 14K</td><td class="r">$695</td><td>—</td><td>$1,200+</td><td>—</td></tr>
+  <tr><td>单钻项链 0.25ct</td><td class="r">$350</td><td>$538–778</td><td>$600</td><td>项链 $565</td></tr>
+  <tr><td>细网球手链 2ct</td><td class="r">$1,190</td><td>—</td><td>$1,935</td><td>手链 $1,950</td></tr>
+  <tr><td>椭圆 1.5ct 婚戒（定制）</td><td class="r">$2,200</td><td>—</td><td>$1,150 起（小克拉）</td><td>戒指 $2,499</td></tr>
+ </table>
+ <p><b>组合定价</b>：耳钉为引流款；项链和手链为利润款；“耳钉 + 项链”礼盒 9 折；刻字和礼盒升级作为可选附加。<b>价格变动规则</b>：不做全场折扣；竞品永久降价且我们的份额连续 4 周下降时，才由价格委员会评估；毛利低于 55% 不跟进。原料降价时，主动按价格保障退差价，同时把它作为传播素材。</p>
+
+ <h3 id="s4-5">4.5 激励策略（促销）</h3>
+ <p>年度激励预算 <b class="dyn" data-v="it_incent">—</b>，优先使用非价格工具，以免顾客对价格越来越敏感（Mela 等, 1997）。</p>
+ <table>
+  <tr><th>工具</th><th>时间</th><th class="r">预算</th><th>规则</th></tr>
+  <tr><td>推荐有礼（双方各得 $40 抵用）</td><td>全年</td><td class="r dyn" data-v="it_incent" data-mul="0.35">—</td><td>被推荐人首单 ≥ $250 才生效</td></tr>
+  <tr><td>节日赠品（刻字、礼盒升级、耳堵）</td><td>2 月、5 月、11–12 月</td><td class="r dyn" data-v="it_incent" data-mul="0.35">—</td><td>满 $500 赠</td></tr>
+  <tr><td>晒单奖励（$15 抵用）</td><td>全年</td><td class="r dyn" data-v="it_incent" data-mul="0.15">—</td><td>真实佩戴图 + 授权</td></tr>
+  <tr><td>会员早鸟（提前 72 小时购买）</td><td>10–11 月</td><td class="r dyn" data-v="it_incent" data-mul="0.15">—</td><td>只送赠品，不打折</td></tr>
+ </table>
+ <p><b>促销纪律</b>：全年最多 2 次限时活动（BFCM、母亲节），力度不超过“满赠”；设 10% 对照组（不发激励）来衡量增量，并观察激励结束后的销量回落。<b>渠道激励</b>：TikTok 联盟达人按佣金结算，统一 MAP，不允许达人私自降价。</p>
+
+ <h3 id="s4-6">4.6 沟通策略</h3>
+ <h4>(1) 沟通目标与预算（目标任务法）</h4>
+ <table>
+  <tr><th>沟通目标</th><th>任务</th><th>基准</th><th>时间</th></tr>
+  <tr><td>建立知晓</td><td>三都市圈目标人群重复触达</td><td>有效频次 ≥ 3；社媒曝光 <span class="dyn" data-v="impr" data-f="int">—</span> 次</td><td>全年</td></tr>
+  <tr><td>建立偏好</td><td>溯源、做工保障、叠戴内容；评价积累</td><td>评价 ≥ 300 条；互动率 ≥ 3%</td><td>Q3 前</td></tr>
+  <tr><td>激励行为</td><td>搜索承接、再营销、弃购召回</td><td>转化率 ≥ 1.0%（行业 0.87–1.19% <span class="src">S49</span>）</td><td>全年</td></tr>
+ </table>
+ <p>影响预算的因素：新产品、零份额、需要解释的信息较复杂（溯源、保障）、竞争沟通激烈，按理应投入较多；但可用资源只有 <span class="dyn" data-v="B">—</span>，所以<b>集中地域、集中时段、优先投放能直接成交的渠道</b>。</p>
+ <h4>自下而上漏斗测算（媒体基准）</h4>
+ <table>
+  <tr><th>渠道</th><th class="r">媒体金额</th><th>单价基准</th><th class="r">产出</th><th class="r">站内访问</th><th class="r">订单（CVR）</th></tr>
+  <tr><td>Meta + TikTok（85% 用于投放，15% 用于测试工具与素材加热）</td><td class="r dyn" data-v="socialMedia">—</td><td>CPM $15.06 <span class="src">S48 Triple Whale</span>；CTR 1.2% <span class="pill p-a">假设</span></td><td class="r"><span data-v="impr" data-f="int">—</span> 曝光</td><td class="r" data-v="sesSocial" data-f="int">—</td><td class="r" data-v="ordSocial" data-f="int">—</td></tr>
+  <tr><td>Google 搜索 + Shopping + PMax</td><td class="r dyn" data-v="it_search">—</td><td>混合 CPC $2.50 <span class="pill p-c">冲突</span>：珠宝 $1.65 <span class="src">S48 cufinder</span> vs 服饰珠宝 $4.31 <span class="src">S48 WordStream</span></td><td class="r"><span data-v="clkSearch" data-f="int">—</span> 点击</td><td class="r" data-v="clkSearch" data-f="int">—</td><td class="r" data-v="ordSearch" data-f="int">—</td></tr>
+  <tr><td>达人与 UGC</td><td class="r dyn" data-v="it_infl">—</td><td>每 $1 带来 0.35 次访问 <span class="pill p-a">假设</span></td><td class="r">—</td><td class="r" data-v="sesInfl" data-f="int">—</td><td class="r" data-v="ordInfl" data-f="int">—</td></tr>
+  <tr><td colspan="4"><b>合计</b>（CVR：社媒 0.9%、搜索 1.8%、达人 1.0%；cufinder 搜索 CVR 2.85% <span class="src">S48</span>，Meta 珠宝 0.94% <span class="src">S48 adamigo</span>）</td><td class="r"><b data-v="sesTotal" data-f="int">—</b></td><td class="r"><b data-v="funnelOrders" data-f="int">—</b></td></tr>
+ </table>
+
+ <h4>(2) 受众、信息与媒介</h4>
+ <table>
+  <tr><th>受众</th><th>角色</th><th>核心信息</th><th>证明点</th></tr>
+  <tr><td>Maya（自购）</td><td>购买者/使用者</td><td>“每天都戴的真钻”</td><td>叠戴示范、IGI 证书</td></tr>
+  <tr><td>伴侣与家人</td><td>购买者/决策者</td><td>“她会真的每天戴的礼物”</td><td>礼盒、准时送达保证、免费退换</td></tr>
+  <tr><td>闺蜜、达人</td><td>影响者</td><td>“我自己就戴这个”</td><td>真实佩戴、长期合作</td></tr>
+  <tr><td>已购顾客</td><td>当前使用者</td><td>“再叠一件”</td><td>搭配推荐、升级换购</td></tr>
+ </table>
+ <div class="grid3">
+  <div class="card"><h4>付费媒体</h4>Meta（IG Reels/Stories、DPA 再营销）；TikTok Spark Ads（为达人内容加热）；Google 搜索、Shopping、PMax（品牌词 + 品类长尾）；Q4 加 Pinterest 测试</div>
+  <div class="card"><h4>自有媒体</h4>官网（溯源页、对比页、保障页）；邮件/短信；IG、TikTok 账号；礼盒与溯源卡</div>
+  <div class="card"><h4>赢得媒体</h4>PR 礼物指南（Forbes、NY Post 等评测已占据搜索前排 <span class="src">S45</span><span class="src">S10</span>）；达人自发；晒单；Reddit 答疑；AI 搜索引用</div>
+ </div>
+
+ <h4>(3) 排期策略：脉冲式（低水平常年投放 + 节点集中）</h4>
+ <p>依据：时尚线 11 月搜索指数 170–226、12 月 219–257，平时 50–90 <span class="src">S32</span>；购买周期长、预算有限，采用<b>脉冲式</b>排期。全年月度预算见 7.4。</p>
+
+ <h4>(4) 创意策略与 ADPLAN 评审</h4>
+ <table>
+  <tr><th>主题</th><th>诉求类型</th><th>信息源</th><th>回应的顾虑</th></tr>
+  <tr><td>“Grown, Not Mined. Worn, Not Saved.”</td><td>转换型（自我奖励）</td><td>真实佩戴者</td><td>真钻也可以每天戴</td></tr>
+  <tr><td>“21 天前它还是一粒种子”工厂生长</td><td>信息型（溯源）</td><td>工厂工程师（专业度）</td><td>真假、产地</td></tr>
+  <tr><td>“如果它降价，我们退你差价”</td><td>信息型（问题解决）</td><td>品牌</td><td>怕买贵、怕贬值</td></tr>
+  <tr><td>“戴给你看”30 天健身、洗手、通勤实测 + 测钻笔</td><td>信息型（比较/演示）</td><td>中腰部达人（讨喜度）</td><td>掉钻断链、“是假的” <span class="src">S42</span></td></tr>
+  <tr><td>#EverydayBrilliance 叠戴挑战</td><td>转换型（用户形象）</td><td>UGC</td><td>社交认可 <span class="src">S40</span></td></tr>
+ </table>
+ <p>每条素材按 ADPLAN（注意力、区分度、定位、联动、放大、净资产）各打 1–5 分，总分 ≥ 22 才上线。<b>与竞品区隔</b>：竞品广告几乎都在讲“同样闪耀、超值、40% OFF” <span class="src">S43</span>；我们不出现折扣字样，也不说“比天然钻便宜”，主讲“自己种 + 每天戴 + 两项保障”；格式沿用视频 + DPA 再营销。</p>
+
+ <h4>(5) 整合营销与在线沟通</h4>
+ <ul class="tight">
+  <li><b>网站</b>：首屏讲三大支柱；产品页放证书、溯源编号、价格对比；结账前展示保障。指标：转化率、加购率（珠宝基准 1.76% <span class="src">S49</span>）、跳出率。</li>
+  <li><b>SEO</b>：围绕 People Also Ask 做内容：“are lab-grown diamond earrings worth it”“how much should lab-grown earrings cost”“downside of lab-grown” <span class="src">S45</span>；品类页参考 Grown Brilliance 的结构。</li>
+  <li><b>GEO</b>：结构化 FAQ、对比表、保障条款原文；争取进入 Forbes、Rare Carat 等“best brands”榜单（这些页面已排进搜索前 6 <span class="src">S45</span>），从而提高被 AI 回答引用的机会。</li>
+  <li><b>SEM</b>：品牌词 + 品类长尾（“lab grown diamond studs 14k”）+ 礼物词；Shopping 只投 $350 以上的款，避开 $150 以下的连锁低价区间 <span class="src">S43</span><span class="src">S46</span>。</li>
+  <li><b>IMC 评分</b>：每季度按覆盖、贡献、共性、互补、整合、成本 6 项给各渠道打分，决定增减。</li>
+ </ul>
+
+ <h3 id="s4-7">4.7 分销策略</h3>
+ <table>
+  <tr><th>渠道</th><th>角色</th><th>收入占比目标</th><th>关键条件</th></tr>
+  <tr><td>DTC 官网（Shopify）</td><td>核心：品牌、数据、利润</td><td>75%</td><td>美国 3PL 2 日达；Klarna/Affirm 分期</td></tr>
+  <tr><td>TikTok Shop（联盟 + 自播）</td><td>获客、新品测试</td><td>20%</td><td>按佣金结算；直播须实时口播“lab-grown”</td></tr>
+  <tr><td>纽约精品店寄售（Q4 测试 3 家）</td><td>线下试戴、信任</td><td>5%</td><td>按销售结算，无进场费</td></tr>
+  <tr><td>Amazon</td><td>暂缓</td><td>0%</td><td>首年不进，避免价格对比和渠道冲突；Y2 再评估</td></tr>
+ </table>
+ <p><b>服务产出需求</b>：一次买 1 件、≤ 5 天送达（Q4 ≤ 3 天）、线上便利、可叠戴组合多样、提供退换和证书服务。<b>渠道系统</b>：公司式垂直营销系统（种钻 → 镶嵌 → DTC），全链路数据自有。<b>寄售店管理</b>：按经营年限、信用、客群匹配和价格纪律挑选；用奖励权力（阶梯返点）和专家权力（培训、陈列）激励；按售罄率、退货率和价格纪律评分，每季度复核。</p>
+</section>
+
+<!-- ================= ⑤ 顾客旅程 ================= -->
+<section id="s5">
+ <h2><span class="n">⑤</span>顾客旅程（5A）与首方数据</h2>
+ <table>
+  <tr><th>阶段</th><th>触点</th><th>指标</th><th>预算来源</th></tr>
+  <tr><td>认知 Aware</td><td>Meta/TikTok 信息流、达人内容</td><td>到达、频次、提示知名度</td><td class="dyn" data-v="it_social" data-mul="0.6">—</td></tr>
+  <tr><td>诉求 Appeal</td><td>品牌内容、溯源视频、叠戴示范</td><td>互动率、品牌搜索量</td><td class="dyn" data-v="it_creative">—</td></tr>
+  <tr><td>询问 Ask</td><td>SEO、GEO、评价、Reddit 答疑、视频顾问</td><td>搜索份额、AI 提及率、评价数</td><td class="dyn" data-v="it_pr">—</td></tr>
+  <tr><td>行动 Act</td><td>官网、分期、搜索/Shopping、再营销</td><td>转化率、AOV、退货率</td><td class="dyn" data-v="it_search">—</td></tr>
+  <tr><td>拥护 Advocate</td><td>CRM、推荐、晒单、会员</td><td>复购率、NPS、推荐率</td><td class="dyn" data-v="it_crm">—</td></tr>
+ </table>
+ <p><b>品牌 / 效果配比</b>：新品牌、预算小，首年按 <b>30 : 70</b> 分配（Binet &amp; Field 的长期建议约 60:40，适用于成熟品牌）；从 Q3 起每季度把品牌部分提高 5 个百分点，前提是 MER ≥ 2.0。</p>
+ <div class="grid2">
+  <div class="card"><h4>首方数据</h4>采集网站行为、订单、问卷、会员和愿望清单数据，均需用户同意（CCPA/CPRA）；按新客/复购、购买场合（自购/送礼）、品类、RFM 分群。目标订阅数：<b class="dyn" data-v="subs" data-f="int">—</b>。</div>
+  <div class="card"><h4>生命周期流程（Klaviyo）</h4>获取：欢迎流程、弃购召回（珠宝弃购率 81% <span class="src">S49</span>）→ 发展：购后保养教育、叠戴交叉销售、生日和纪念日提醒 → 保留：免费紧镶预约、升级换购 → 推荐：双向奖励、晒单。邮件流程点击率 4.5–6.2% <span class="src">S49</span>。</div>
+ </div>
+</section>
+
+<!-- ================= ⑥ 进入与本地化 ================= -->
+<section id="s6">
+ <h2><span class="n">⑥</span>市场进入、本地化与合规</h2>
+ <table>
+  <tr><th>进入方式</th><th>控制</th><th>投入/风险</th><th>速度</th><th>与现有业务冲突</th><th>结论</th></tr>
+  <tr><td>出口给美国零售商</td><td>低</td><td>低</td><td>中</td><td>低</td><td>不做（拿不到品牌和数据）</td></tr>
+  <tr><td><b>自营 DTC</b></td><td>高</td><td>中</td><td>快</td><td>中</td><td><b>主路径</b></td></tr>
+  <tr><td>平台入驻（TikTok Shop）</td><td>中</td><td>低</td><td>快</td><td>低</td><td><b>辅助</b></td></tr>
+  <tr><td>合资/收购</td><td>高</td><td>高</td><td>快</td><td>—</td><td>Y3 后再评估</td></tr>
+ </table>
+ <p><b>分阶段进入</b>（乌普萨拉模型）：先在三个都市圈低投入试点，通过闸门后扩大到全美，Y2 视情况开设快闪店并进入 Amazon。</p>
+ <div class="grid2">
+  <div class="card"><h4>统一 vs 本地化</h4>全球统一：产品标准（IGI、14K、质检）、品牌核心（三大支柱）。本地调整：设计（美国流行的椭圆、细链叠戴 <span class="src">S32</span>）、尺码、沟通语言与达人、定价、退换政策（美国习惯 30 天免费退）。<br>团队：面向消费者的岗位放在美国，产品与供应链留在中国。</div>
+  <div class="card"><h4>原产地效应</h4>如实标注原产地；用透明（生长视频、溯源编号）、第三方认证（IGI）、本地服务（美国 3PL、美国客服）和美国设计师背书来降低顾虑；用 H7 A/B 测试量化产地信息对转化的影响。</div>
+ </div>
+ <h4>上线前合规清单</h4>
+ <ul class="tight">
+  <li>所有提到钻石的地方都写明“lab-grown diamond”；不单独用“real diamond”；用“cultured”时必须同时加“laboratory-grown” <span class="src">S17</span></li>
+  <li>达人内容带 #ad 或平台合作标签，并在口播中说明 <span class="src">S19</span>；合同写入披露条款，按月抽检</li>
+  <li>评价不筛选、不购买（FTC 2024 评价规则）；环保宣称需第三方数据</li>
+  <li>价格保障条款写明起止时间、计算方式和例外</li>
+  <li>进口：HTS 归类（7113/7104）、原产地标注、关税测算 <span class="src">S51</span>、UFLPA 供应链和能源文件</li>
+  <li>隐私：CCPA/CPRA 告知和退订；短信遵守 TCPA</li>
+ </ul>
+</section>
+
+<!-- ================= ⑦ 执行 ================= -->
+<section id="s7">
+ <h2><span class="n">⑦</span>执行：路线图、活动、组织与预算排期</h2>
+ <h3 id="s7-1">7.1 路线图与阶段闸门</h3>
+ <table>
+  <tr><th>阶段</th><th>时间</th><th>关键产出</th><th>闸门（达标才进入下一阶段）</th></tr>
+  <tr><td>Phase 0 准备</td><td>2026-11 至 2027-01</td><td>商标、美国主体、3PL、Shopify、IGI 证书、30 个 SKU、合规清单、素材库（40 条）</td><td>网站上线、合规清单 100% 通过</td></tr>
+  <tr><td>Phase 1 软启动</td><td>2027-02（含情人节）</td><td>8 条假设测试</td><td><b>G1</b>：媒体 CAC ≤ 基准 × 1.3；CVR ≥ 0.8%</td></tr>
+  <tr><td>Phase 2 发布与学习</td><td>2027-03 至 06</td><td>PR 种草、母亲节、TikTok 联盟</td><td><b>G2</b>：MER ≥ 1.6；90 天复购 ≥ 5%</td></tr>
+  <tr><td>Phase 3 扩展</td><td>2027-07 至 10</td><td>UGC 挑战、婚戒询单测试、会员早鸟</td><td><b>G3</b>：MER ≥ 1.8 → 放出机动金 30%</td></tr>
+  <tr><td>Phase 4 旺季</td><td>2027-11 至 12</td><td>BFCM、圣诞、纽约寄售</td><td><b>G4</b>：BFCM 首周 ROAS ≥ 2.5 → 放出剩余机动金</td></tr>
+ </table>
+
+ <h3 id="s7-2">7.2 年度活动日历</h3>
+ <table>
+  <tr><th>#</th><th>活动</th><th>时间</th><th>洞察 → 创意</th><th>传播组合</th><th class="r">预算</th><th>KPI</th></tr>
+  <tr><td>1</td><td>软启动 + 情人节“Treat Her Daily”</td><td>2 月</td><td>送礼者怕出错 → 礼盒 + 准时送达</td><td>Meta、搜索、10 位达人</td><td class="r dyn" data-v="B" data-mul="0.12">—</td><td>8 条假设有结论；新客 <span data-v="newC" data-mul="0.08" data-f="int">—</span></td></tr>
+  <tr><td>2</td><td>品牌发布：“Grown by Us”PR 种草</td><td>3–4 月</td><td>媒体评测占据搜索前排 → 向编辑寄样</td><td>PR、礼物指南、SEO</td><td class="r dyn" data-v="B" data-mul="0.07">—</td><td>媒体报道 ≥ 8 篇</td></tr>
+  <tr><td>3</td><td>母亲节“From Seed to Shine”</td><td>5 月</td><td>家人送礼 → 母女叠戴</td><td>Meta、TikTok Spark、邮件</td><td class="r dyn" data-v="B" data-mul="0.10">—</td><td>新客 <span data-v="newC" data-mul="0.10" data-f="int">—</span></td></tr>
+  <tr><td>4</td><td>#EverydayBrilliance 夏季叠戴挑战</td><td>6–7 月</td><td>社交认可顾虑 → 晒真实佩戴</td><td>TikTok 联盟、UGC</td><td class="r dyn" data-v="B" data-mul="0.08">—</td><td>UGC ≥ 300 条</td></tr>
+  <tr><td>5</td><td>婚戒定制询单测试</td><td>8–9 月</td><td>求婚季 → 视频顾问 + 价格保障</td><td>搜索长尾、Reddit 答疑</td><td class="r dyn" data-v="B" data-mul="0.05">—</td><td>询单 ≥ 60、成交 ≥ 10</td></tr>
+  <tr><td>6</td><td>会员早鸟 + 纽约珠宝周</td><td>10–11 月中</td><td>积累 Q4 再营销人群</td><td>Meta 线索广告、邮件</td><td class="r dyn" data-v="B" data-mul="0.08">—</td><td>订阅 +<span data-v="subs" data-mul="0.4" data-f="int">—</span></td></tr>
+  <tr><td>7</td><td>BFCM“The Gift She'll Wear Daily”</td><td>11 月</td><td>送礼高峰 → 礼盒满赠，不打折</td><td>全渠道 + TikTok 直播专场</td><td class="r dyn" data-v="B" data-mul="0.22">—</td><td>收入 <span data-v="rev" data-mul="0.22">—</span></td></tr>
+  <tr><td>8</td><td>圣诞 + 纽约寄售</td><td>12 月</td><td>最后送达日倒计时</td><td>搜索、再营销、寄售店</td><td class="r dyn" data-v="B" data-mul="0.14">—</td><td>收入 <span data-v="rev" data-mul="0.18">—</span></td></tr>
+  <tr><td colspan="5">活动合计（其余为常年投放：品牌词、再营销、SEO、CRM 工具、调研、机动）</td><td class="r dyn" data-v="B" data-mul="0.86">—</td><td>占 86%</td></tr>
+ </table>
+
+ <h3 id="s7-3">7.3 组织与 RACI</h3>
+ <table>
+  <tr><th>岗位</th><th>人数</th><th>地点</th><th>职责</th></tr>
+  <tr><td>美国品牌负责人（兼 GM）</td><td>1</td><td>纽约</td><td>对收入负责；品牌、PR、达人</td></tr>
+  <tr><td>增长负责人（外包/兼职）</td><td>1</td><td>远程</td><td>投放、CRO、数据</td></tr>
+  <tr><td>客服与社群</td><td>1</td><td>美国（远程）</td><td>客服、评价、Reddit 答疑、CRM</td></tr>
+  <tr><td>产品、设计、供应链、合规</td><td>3–4</td><td>中国</td><td>款式、打样、生产、报关、证书</td></tr>
+  <tr><td>外部</td><td>—</td><td>美国</td><td>自由职业摄影/剪辑、PR 自由顾问、3PL、TikTok 联盟机构</td></tr>
+ </table>
+ <table>
+  <tr><th>任务</th><th>品牌负责人</th><th>增长</th><th>客服社群</th><th>中国团队</th><th>CMO</th></tr>
+  <tr><td>年度预算与调仓</td><td>R</td><td>C</td><td>I</td><td>I</td><td>A</td></tr>
+  <tr><td>投放与测试</td><td>A</td><td>R</td><td>I</td><td>I</td><td>I</td></tr>
+  <tr><td>素材与达人</td><td>A/R</td><td>C</td><td>C</td><td>C</td><td>I</td></tr>
+  <tr><td>新品与库存</td><td>C</td><td>C</td><td>I</td><td>R</td><td>A</td></tr>
+  <tr><td>合规抽检</td><td>A</td><td>C</td><td>R</td><td>R</td><td>I</td></tr>
+  <tr><td>价格变动</td><td>R</td><td>C</td><td>I</td><td>C</td><td>A</td></tr>
+ </table>
+ <p><b>决策机制</b>：周会（周一看板）、月度预算会（每月 5 日调仓）、价格委员会（按需召开）、季度复盘（闸门判定）。</p>
+
+ <h3 id="s7-4">7.4 预算排期表（科目 × 季度）</h3>
+ <table id="qTbl"><thead><tr><th>科目</th><th class="r">Q1</th><th class="r">Q2</th><th class="r">Q3</th><th class="r">Q4</th><th class="r">全年</th></tr></thead><tbody></tbody><tfoot></tfoot></table>
+ <h4>月度预算（脉冲式）</h4>
+ <div class="chart" id="monthChart"></div>
+ <div class="chart" id="qChart" style="margin-top:8px"></div>
+ <div class="legend" id="qLegend"></div>
+ <div class="note"><b>调仓规则</b>：每月按各渠道边际 CAC 排序，从边际 CAC 最高的渠道向最低的渠道调整，单次调仓 ≤ 总预算的 15%（即 <span class="dyn" data-v="B" data-mul="0.15">—</span>）；机动金 <span class="dyn" data-v="it_reserve">—</span> 只在 G3、G4 闸门通过后释放；某渠道连续 4 周 CAC 超过目标 30%，降到维持水平。</div>
+</section>
+
+<!-- ================= ⑧ 控制 ================= -->
+<section id="s8">
+ <h2><span class="n">⑧</span>测量与控制</h2>
+ <table>
+  <tr><th>控制类型</th><th>目的</th><th>方法</th><th>频率</th><th>负责人</th></tr>
+  <tr><td>年度计划控制</td><td>检查目标是否实现</td><td>销售分析、营销费用/销售比、财务分析、平衡计分卡</td><td>周/月</td><td>品牌负责人</td></tr>
+  <tr><td>盈利能力控制</td><td>哪里赚钱、哪里亏钱</td><td>按产品线、渠道、人群（自购/送礼）、订单规模、都市圈分析贡献</td><td>月</td><td>财务</td></tr>
+  <tr><td>效率控制</td><td>提高营销效率</td><td>各渠道 CAC、ROAS、达人 CPA、促销增量</td><td>周</td><td>增长</td></tr>
+  <tr><td>战略控制</td><td>是否抓住了最佳机会</td><td>营销审核（G-STIC）、品牌健康、5C 扫描、道德与社会责任评估</td><td>季/年</td><td>CMO</td></tr>
+ </table>
+ <h3>8.1 KPI 字典</h3>
+ <table>
+  <tr><th>类别</th><th>指标</th><th>年度目标</th><th>数据源</th></tr>
+  <tr><td>销售</td><td>收入、新品收入占比</td><td><span class="dyn" data-v="rev">—</span>；新品 ≥ 25%</td><td>Shopify</td></tr>
+  <tr><td>购买倾向</td><td>提示知名度、考虑度、试用率、复购率</td><td>2%（三都市圈）、15%、—、15%</td><td>季度问卷</td></tr>
+  <tr><td>顾客</td><td>新客、CAC、留存、LTV/CAC、NPS、投诉率</td><td><span class="dyn" data-v="newC" data-f="int">—</span>、<span class="dyn" data-v="cacFull">—</span>、—、≥ 1.5（24 个月）、≥ 50、&lt; 1%</td><td>Shopify、Klaviyo、Okendo</td></tr>
+  <tr><td>分销</td><td>各渠道销售、缺货率、库存天数</td><td>缺货 &lt; 3%，库存 ≤ 120 天</td><td>3PL</td></tr>
+  <tr><td>传播</td><td>曝光、有效频次、互动率、品牌搜索、SOV</td><td><span class="dyn" data-v="impr" data-f="int">—</span>；≥ 3；≥ 3%；月 1,000；—</td><td>平台、Search Console</td></tr>
+  <tr><td>效率</td><td>MER、各渠道 ROAS、转化率、AOV</td><td><span class="dyn" data-v="mer" data-f="x">—</span>；Meta ≥ 2.4（行业中位 <span class="src">S48</span>）；≥ 1.0%；<span data-v="aov">—</span></td><td>GA4、平台</td></tr>
+  <tr><td>合规</td><td>披露合规率</td><td>100%</td><td>月度抽检</td></tr>
+ </table>
+ <h3>8.2 数字测量三层</h3>
+ <div class="grid3">
+  <div class="card"><h4>平台归因</h4>只用来看趋势；各平台会重复认领同一笔订单，不能相加。UTM 规范、服务器端转化（CAPI）、订单按都市圈归属。</div>
+  <div class="card"><h4>增量测试</h4>Q2 做一次 Meta 转化提升测试；Q3 做一次地理对照（geo-lift）测试，以洛杉矶 vs 旧金山为测试组和对照组，费用从调研预算 <span class="dyn" data-v="it_research">—</span> 中列支。MMM 在积累 1–2 年数据后再做（Robyn / Meridian）。</div>
+  <div class="card"><h4>整体效率</h4>MER = 收入 ÷ 营销费用，不受归因口径影响；单客经济每月更新；品牌提升问卷每季度做一次。</div>
+ </div>
+ <h3>8.3 预警与纠偏</h3>
+ <table>
+  <tr><th>预警</th><th>触发线</th><th>动作</th></tr>
+  <tr><td>CAC 偏高</td><td>连续 2 周媒体 CAC &gt; <span class="dyn" data-v="cacMedia" data-mul="1.3">—</span></td><td>暂停表现最差的 20% 素材/受众，转向表现好的渠道</td></tr>
+  <tr><td>转化下降</td><td>周转化率 &lt; 0.8%</td><td>检查网站、价格、库存；加大评价展示</td></tr>
+  <tr><td>退货率高</td><td>&gt; 15%</td><td>检查尺寸、图片与实物差异</td></tr>
+  <tr><td>复购不足</td><td>90 天复购 &lt; 5%</td><td>加强 CRM，预算向礼盒和送礼人群倾斜</td></tr>
+  <tr><td>毛利下滑</td><td>&lt; 60%</td><td>价格委员会复审促销和成本</td></tr>
+  <tr><td>舆情风险</td><td>负面声量周增 &gt; 50% 或出现合规投诉</td><td>启动危机预案，24 小时内回应</td></tr>
+ </table>
+ <p><b>节奏</b>：每周一看红黄绿看板；每周三评审素材；每月 5 日复盘并调仓；每季度做品牌追踪、增量测试、闸门判定和 5C 扫描（用 crawler 每月抓取 Trends、竞品价格、评价、广告库）；年度做营销审核。</p>
+</section>
+
+<!-- ================= ⑨ 测试 ================= -->
+<section id="s9">
+ <h2><span class="n">⑨</span>测试与迭代：假设清单与判定</h2>
+ <table>
+  <tr><th>#</th><th>假设</th><th>类型</th><th>方法 / 样本</th><th>通过标准</th><th>未通过时的动作</th></tr>
+  <tr><td>H1</td><td>Maya（自购）是获客效率最高的人群</td><td>硬门槛</td><td>3 组受众各 <span class="dyn" data-v="it_social" data-mul="0.03">—</span></td><td>CAC 最低组比其他组低 20%</td><td>改主攻送礼人群</td></tr>
+  <tr><td>H2</td><td>时尚线 AOV ≥ <span data-v="aov">—</span></td><td>硬门槛</td><td>价格 A/B，≥ 150 单</td><td>AOV ≥ 基准的 90%</td><td>重排礼盒组合</td></tr>
+  <tr><td>H3</td><td>“价格保障/做工保障”能提升转化</td><td>方向性</td><td>落地页 A/B，每组 ≥ 5,000 访问</td><td>转化提升 ≥ 10%</td><td>改讲溯源</td></tr>
+  <tr><td>H4</td><td>“溯源”素材的 CTR 高于“价格”素材</td><td>方向性</td><td>素材对比，每组 ≥ 50 万曝光</td><td>CTR 高 15%</td><td>主打叠戴</td></tr>
+  <tr><td>H5</td><td>12 个月复购 ≥ 15%</td><td>硬门槛</td><td>用 90 天复购外推</td><td>90 天复购 ≥ 5%</td><td>预算向送礼人群倾斜</td></tr>
+  <tr><td>H6</td><td>TikTok 联盟 ROAS ≥ 2</td><td>方向性</td><td>30 位联盟达人、4 场直播</td><td>ROAS ≥ 1.8</td><td>转为只用 Spark Ads</td></tr>
+  <tr><td>H7</td><td>标注“中国种钻”不会降低转化</td><td>硬门槛</td><td>产品页讲/不讲产地 A/B</td><td>转化差异 &lt; 5%</td><td>改讲“美国设计 + 第三方认证”</td></tr>
+  <tr><td>H8</td><td>含关税后毛利 ≥ 68% 可以做到</td><td>硬门槛</td><td>实际到岸成本</td><td>≥ 63%</td><td>第三地镶嵌或调价</td></tr>
+ </table>
+ <p><b>纪律</b>：开测前写好通过标准；样本不足视为“未判定”；不事后改口径。<b>回写</b>：每季度把测试结果回写到 ① 目标、③ STP、④ 7T，并更新一版计划（本页的模型假设可直接修改，用于季度重算）。</p>
+</section>
+
+<!-- ================= G-STIC ================= -->
+<section id="s10">
+ <h2><span class="n">◎</span>G-STIC 行动计划（一页汇总）</h2>
+ <table>
+  <tr><th style="width:110px">要素</th><th>内容</th></tr>
+  <tr><td><b>G 目标</b></td><td>重点：新客 <span class="dyn" data-v="newC" data-f="int">—</span>、收入 <span class="dyn" data-v="rev">—</span>、MER ≥ 2.0；基准：0（新品牌）；截止 2027-12-31，按季度设闸门。</td></tr>
+  <tr><td><b>S 战略</b></td><td>目标市场：都市职业女性（自购）+ 节日送礼者；价值主张：日常可戴的、可溯源的真钻，配套价格保障和做工保障；定位：日常高级首饰（对标 Mejuri），而不是便宜钻石。</td></tr>
+  <tr><td><b>T 战术</b></td><td>产品：30 个 SKU，时尚线为主｜服务：三项保障｜品牌：LUMORA 品牌屋｜价格：$295–1,290，不打折｜激励：<span class="dyn" data-v="it_incent">—</span>，只做非价格激励｜沟通：<span class="dyn" data-v="it_social">—</span> 社媒 + <span class="dyn" data-v="it_search">—</span> 搜索 + <span class="dyn" data-v="it_infl">—</span> 达人｜分销：DTC + TikTok Shop + Q4 寄售</td></tr>
+  <tr><td><b>I 执行</b></td><td>开发：Phase 0 完成商标、主体、SKU、证书、合规｜部署：Phase 1–4，8 个活动，季度预算 Q1 <span class="dyn" data-v="q1">—</span> / Q2 <span class="dyn" data-v="q2">—</span> / Q3 <span class="dyn" data-v="q3">—</span> / Q4 <span class="dyn" data-v="q4">—</span></td></tr>
+  <tr><td><b>C 控制</b></td><td>绩效：KPI 字典、预警线、闸门 G1–G4｜环境：每月用 crawler 扫描趋势、竞品价格、评价、广告库，以及关税和 FTC 动态</td></tr>
+ </table>
+</section>
+
+<section id="s11">
+ <h2><span class="n">!</span>风险与应对</h2>
+ <table>
+  <tr><th>风险</th><th>概率</th><th>影响</th><th>应对</th></tr>
+  <tr><td>预算太小，触达不够</td><td>高</td><td>高</td><td>集中三都市圈 + 搜索承接；达人按佣金结算；闸门通过后再追加</td></tr>
+  <tr><td>关税上调</td><td>中高</td><td>高</td><td>第三地镶嵌；定价留 5% 缓冲 <span class="src">S51</span></td></tr>
+  <tr><td>价格战</td><td>高</td><td>中</td><td>不按克拉竞争；Shopping 避开低价区间；价格保障作为传播素材</td></tr>
+  <tr><td>“不保值”舆论</td><td>高</td><td>中</td><td>终身升级 + 教育内容</td></tr>
+  <tr><td>中国产地信任</td><td>中</td><td>中</td><td>H7 测试；强调溯源与第三方认证</td></tr>
+  <tr><td>达人合规</td><td>中</td><td>中</td><td>合同条款 + 每月抽检</td></tr>
+  <tr><td>UFLPA 扣货</td><td>低中</td><td>高</td><td>提前备好供应链与能源文件</td></tr>
+ </table>
+</section>
+
+<!-- ================= 附录 ================= -->
+<section id="appendix">
+ <h2><span class="n">附</span>附录：本报告数据来源</h2>
+ <p class="lead">层级：A = 报告/新闻/法规，B = 公开行为数据（搜索、社媒、评价），C = 竞品数据（官网、广告、Shopping）。抓取日期均为 2026-11-10（P1、P2 为 2026-11-07）。原始数据存放在项目目录 <code>data/</code> 下。</p>
+ <h3>A. 来源登记表</h3>
+ <table style="font-size:12.5px">
+  <tr><th>编号</th><th>层</th><th>发布方 / 来源</th><th>内容</th><th>用于</th></tr>
+  <tr><td>S1</td><td>A</td><td>De Beers Group《The Diamond Report》2026-06（PDF 原文，天然钻生产商立场）</td><td>培育钻占美国钻石需求价值 25%、获取率 9%、均价 $2,786、48% 低于 $1,000、批发价 &lt; $100/克拉、送礼 44%/自购 31%、千禧/Z 世代占比</td><td>①②③④</td></tr>
+  <tr><td>S2</td><td>A</td><td>Google News：BBC、Yahoo Finance（Astute Analytica）、National Jeweler</td><td>市场规模新闻（营销型报告，弱证据）</td><td>①</td></tr>
+  <tr><td>S3</td><td>A</td><td><a href="https://www.paulzimnisky.com/lab-grown-diamond-market" target="_blank">Paul Zimnisky</a></td><td>抓取失败（404），记入缺口</td><td>—</td></tr>
+  <tr><td>S4</td><td>A</td><td>Google News：Rapaport、JCK、CBS News（The Knot 研究）</td><td>培育钻占订婚戒消费主导</td><td>①③</td></tr>
+  <tr><td>S5</td><td>A</td><td>Google News：Fortune（麦肯锡）、Rapaport</td><td>约一半千禧与 Z 世代情侣选择培育钻婚戒</td><td>②</td></tr>
+  <tr><td>S6</td><td>A</td><td><a href="https://www.theknot.com/content/jewelry-and-engagement-study" target="_blank">The Knot Jewelry &amp; Engagement Study</a></td><td>婚戒研究页面</td><td>①</td></tr>
+  <tr><td>S7</td><td>A</td><td>Google News：JCK、CNBC、money.com</td><td>培育钻批发价“自由落体”，零售毛利可能是下一个</td><td>②④</td></tr>
+  <tr><td>S8</td><td>A</td><td><a href="https://www.bain.com/insights/topics/diamond-report/" target="_blank">Bain Diamond Report</a></td><td>抓取失败（404）</td><td>—</td></tr>
+  <tr><td>S9</td><td>A</td><td>Google News：Forbes、JCK、WWD</td><td>Signet 靠培育钻时尚首饰 +6%；关闭 James Allen</td><td>②</td></tr>
+  <tr><td>S10</td><td>A</td><td>Google News：National Jeweler、New York Post、Good Morning America</td><td>Brilliant Earth 业绩；媒体“最佳培育钻品牌”评测</td><td>②④</td></tr>
+  <tr><td>S11</td><td>A</td><td>Google News：Pandora Group、WWD、National Jeweler</td><td>Pandora 碳足迹标签；培育钻销售下滑</td><td>②</td></tr>
+  <tr><td>S12</td><td>A</td><td><a href="https://www.census.gov/retail/index.html" target="_blank">U.S. Census Bureau Retail</a></td><td>零售数据入口（珠宝单列表格未下载）</td><td>缺口</td></tr>
+  <tr><td>S13</td><td>A</td><td>Google News：The New York Times、The Guardian、Rolling Stone</td><td>TikTok 直播“拆钻石”爆红</td><td>②③</td></tr>
+  <tr><td>S14</td><td>A</td><td>Google News：Mastercard SpendingPulse、NYT、Business Wire</td><td>2026 假日零售预计 +5.5%</td><td>②</td></tr>
+  <tr><td>S15</td><td>A</td><td>Google News：CNBC、The Mary Sue、Money Talks News</td><td>钻石价格创新低；“没有转售价值”</td><td>②④</td></tr>
+  <tr><td>S16</td><td>A</td><td>Google News：JCK、National Jeweler、Rapaport</td><td>NDC 更名 Diamond Collective；反击 Pandora</td><td>②</td></tr>
+  <tr><td>S17</td><td>A</td><td><a href="https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23" target="_blank">eCFR 16 CFR Part 23 FTC 珠宝指南</a>（原文）</td><td>“laboratory-grown”标注要求</td><td>⑥</td></tr>
+  <tr><td>S18</td><td>B</td><td>Google Trends（美国，5 年周度）</td><td>lab grown / natural / moissanite 搜索趋势</td><td>①②</td></tr>
+  <tr><td>S19</td><td>A</td><td><a href="https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking" target="_blank">FTC 代言指南 FAQ</a></td><td>达人披露要求</td><td>⑥</td></tr>
+  <tr><td>S20</td><td>A</td><td>Google News：National Jeweler、Bloomberg、IDEX</td><td>新一轮关税对珠宝的影响</td><td>②⑥</td></tr>
+  <tr><td>S21</td><td>A</td><td>Google News：Natural Diamond Council、TechBullion、Rapaport</td><td>GIA 调整培育钻证书</td><td>②</td></tr>
+  <tr><td>S22</td><td>A</td><td>Google News：National Jeweler、JCK、The Jewelry Wire</td><td>美印协议：宝石 0%、首饰 18%</td><td>②</td></tr>
+  <tr><td>S23</td><td>A</td><td>Google News：Brides、CBC、Augusta Free Press</td><td>培育钻 vs 天然钻对比</td><td>②</td></tr>
+  <tr><td>S24</td><td>A</td><td>Google News：Reuters、South China Morning Post、China Daily</td><td>中国培育钻厂商转向 AI/芯片</td><td>②</td></tr>
+  <tr><td>S25</td><td>A</td><td>FTC Jewelry Guides FAQ</td><td>抓取失败（404）</td><td>—</td></tr>
+  <tr><td>S26</td><td>A</td><td>Google News：The Jewelry Wire、National Jeweler、MiningMX</td><td>De Beers/天然钻阵营动态</td><td>②</td></tr>
+  <tr><td>S27–S29</td><td>A</td><td>Google News：Rapaport、National Jeweler、Yahoo Finance、Forbes、Simply Wall St、The Jewelry Wire</td><td>Brilliant Earth 恢复盈利；Signet 产品结构；零售加价约 10 倍</td><td>①④</td></tr>
+  <tr><td>S30</td><td>A</td><td>Google News：Forbes、Inc.、Vogue</td><td>Mejuri 动态；金价上涨压力</td><td>②</td></tr>
+  <tr><td>S31</td><td>B</td><td>Google Trends（价格相关词、地区分布）</td><td>“1 carat lab grown vs natural price”上升；州级兴趣</td><td>③</td></tr>
+  <tr><td>S32</td><td>B</td><td>Google Trends（耳钉/手链/项链/婚戒）</td><td>季节指数：11–12 月为平时的 2–2.5 倍；相关上升词</td><td>②④⑦</td></tr>
+  <tr><td>S33–S37</td><td>C</td><td>竞品官网：mejuri.com、ringconcierge.com、stienhardt.com、vondiamonds.com、miadonna.com</td><td>在售款与标价</td><td>②④</td></tr>
+  <tr><td>S38</td><td>B</td><td>Trustpilot（Apify）：Mejuri + VRAI，40 条</td><td>均分 2.92；1–2 星占 47.5%；做工与售后问题</td><td>②③④</td></tr>
+  <tr><td>S39</td><td>B</td><td>Trustpilot（Apify）：Brilliant Earth，20 条</td><td>1–2 星占 40%；掉钻、送货慢；顾问获好评</td><td>②④</td></tr>
+  <tr><td>S40</td><td>B</td><td>Reddit（Apify），40 帖</td><td>价格/价值 50%；真假与他人看法 32.5%</td><td>②③</td></tr>
+  <tr><td>S41</td><td>B</td><td>TikTok（Apify），37 条</td><td>婚戒内容为主；工厂号打“IGI certified”</td><td>②</td></tr>
+  <tr><td>S42</td><td>B</td><td>YouTube（Apify），24 条</td><td>真假与鉴别 62.5%；价格 54%</td><td>②④</td></tr>
+  <tr><td>S43</td><td>C</td><td>Meta 广告库（Apify），20 条在投</td><td>竞品广告说法；Banter “under $150”；Helzberg “small blue boxes”</td><td>②④</td></tr>
+  <tr><td>S44</td><td>C</td><td>TikTok Creative Center 热门广告（Apify），22 条</td><td>仅约 3 条相关，不作结论</td><td>—</td></tr>
+  <tr><td><b>S45</b></td><td>B</td><td><b>Google 搜索排名（Serper，高级查询）</b>：5 个品类词</td><td>Grown Brilliance、MiaDonna、Ring Concierge、Blue Nile、Plum、Forbes 评测排在前列；People Also Ask 问题</td><td>②④</td></tr>
+  <tr><td><b>S46</b></td><td>C</td><td><b>Google Shopping（Serper，高级查询）</b>：4 个词 160 个商品</td><td>耳钉中位 $452.5、项链 $565、手链 $1,950、戒指 $2,499；卖家 Kay 20、Macy's 14、Helzberg 12、Brilliant Earth 8</td><td>②④</td></tr>
+  <tr><td><b>S47</b></td><td>A</td><td><b>Tavily 搜索（高级查询）</b>：<a href="https://www.custommarketinsights.com/report/us-lab-grown-diamonds-market" target="_blank">Custom Market Insights</a>、<a href="https://www.precedenceresearch.com/lab-grown-diamonds-market" target="_blank">Precedence Research</a>、<a href="https://brite.co/research/jewelry-diamond-watch-price-index" target="_blank">BriteCo Price Index</a>、<a href="https://caratx.com/blog/lab-grown-diamonds-2025-fast-growth-bigger-stones" target="_blank">CaratX（引 The Knot 2026）</a>、<a href="https://southernjewelrynews.com/2025-2026-state-of-the-diamond-industry" target="_blank">Southern Jewelry News</a></td><td>美国培育钻市场 $217.6 亿（2025，营销型报告）；全球 $297 亿；培育钻占估价 47%、耳饰 39%；订婚戒 61%</td><td>①②</td></tr>
+  <tr><td><b>S48</b></td><td>A</td><td><b>Tavily 搜索</b>：<a href="https://www.wordstream.com/blog/2025-google-ads-benchmarks" target="_blank">WordStream</a>、<a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks" target="_blank">Triple Whale</a>、<a href="https://beingecom.com/benchmarks/paid-ads" target="_blank">BeingEcom</a>、<a href="https://cufinder.io/blog/benchmarks/jewelers" target="_blank">cufinder</a>、<a href="https://www.adamigo.ai/blog/meta-ads-conversion-rate-benchmarks-industry-2026" target="_blank">adamigo</a></td><td>服饰珠宝 CPC $4.31；Meta CPM $15.06；Meta 中位 ROAS 2.4；珠宝 CPC $1.65、搜索 CVR 2.85%；Meta 珠宝 CVR 0.94%</td><td>①④</td></tr>
+  <tr><td><b>S49</b></td><td>A</td><td><b>Tavily 搜索</b>：<a href="https://eightx.co/blog/jewelry-financial-benchmark" target="_blank">Eightx</a>、<a href="https://branvas.com/blogs/news/jewelry-ecommerce-benchmarks-conversion-rate-aov" target="_blank">Branvas</a>、<a href="https://wisepim.com/ecommerce-industry-insights/jewelry" target="_blank">WisePIM</a>、<a href="https://blendcommerce.com/blogs/shopify/ecommerce-conversion-rate-benchmarks-2026" target="_blank">Blend Commerce</a>、<a href="https://www.theconceptagency.ca/blogs/email-marketing-for-dtc-jewelry-brands-the-2026-playbook" target="_blank">The Concept Agency</a></td><td>毛利 55–75%；付费 CAC $70–180；转化率 0.87–1.19%；AOV $337；弃购率 81.4%；一年内回购 28%；LTV:CAC 3:1；邮件流程点击率 4.5–6.2%</td><td>①⑤⑧</td></tr>
+  <tr><td><b>S50</b></td><td>A</td><td><b>Tavily 搜索</b>：<a href="https://impact.com/influencer/how-much-do-influencers-charge-per-post" target="_blank">impact.com</a>、<a href="https://blog.hootsuite.com/influencer-pricing" target="_blank">Hootsuite</a>、<a href="https://stan.store/blog/influencer-rates" target="_blank">Stan</a>、<a href="https://collabstr.com/blog/influencer-costs-2025" target="_blank">Collabstr</a>、<a href="https://inbeat.agency/blog/influencer-marketing-benchmark-report" target="_blank">inBeat</a></td><td>TikTok 微型达人 $500–2,000/条（Hootsuite），Instagram 微型达人 $2,000–8,000（impact.com），各家口径差异大</td><td>④⑦</td></tr>
+  <tr><td><b>S51</b></td><td>A</td><td><b>Tavily 新闻</b>：<a href="https://rapaport.com/news/new-us-tariffs-include-diamonds-and-gemstones" target="_blank">Rapaport 2026-07-26</a>、<a href="https://nationaljeweler.com/articles/15165-new-trump-tariffs-what-they-mean-for-jewelry" target="_blank">National Jeweler 2026-07-24</a>、<a href="https://nationaljeweler.com/articles/14731-7-trends-that-could-define-the-diamond-industry-s-future" target="_blank">National Jeweler 2026-03-03</a></td><td>美国对 60 国宝石首饰加征 10% 或 12.5% 关税</td><td>②⑥</td></tr>
+  <tr><td>P1</td><td>C</td><td>竞品官网价格抓取（2026-11-07）：VRAI、Mejuri、Ring Concierge、Keyzar，共 595 条</td><td>非婚戒中位 $838；Mejuri 耳饰 $349、VRAI 耳饰 $885 等</td><td>②④</td></tr>
+  <tr><td>P2</td><td>B</td><td>Reddit 主题统计（2026-11-07），945 帖</td><td>婚戒 584、彩钻/异形 401、价格 347 等</td><td>③</td></tr>
+ </table>
+ <h3>B. 抓取方式与费用</h3>
+ <table>
+  <tr><th>批次</th><th>档位</th><th>工具</th><th>用量 / 费用</th></tr>
+  <tr><td>主抓取（S1–S37）</td><td>基础查询</td><td>PDF、Google News RSS、Google Trends、官网抓取</td><td>$0；任务 59 个，成功 37 个</td></tr>
+  <tr><td>高级补抓一（S38–S44）</td><td>高级查询</td><td>Apify（Trustpilot、Reddit、TikTok、YouTube、Meta/TikTok 广告库）</td><td>约 $0.60</td></tr>
+  <tr><td>高级补抓二（S45–S51）</td><td>高级查询</td><td>Serper（搜索排名 5 次、Shopping 4 次）、Tavily（5 次）</td><td>Serper 9 次、Tavily 5 次（均在单次上限内）</td></tr>
+ </table>
+ <h3>C. 缺口与局限</h3>
+ <ul class="tight">
+  <li>美国培育钻零售总额口径冲突（营销型报告 vs De Beers 占比），TAM 只作量级参考；需采购 Euromonitor/Statista 或读 Signet 年报核实。</li>
+  <li>多数 Google News 来源只读到标题，引用其中的数字前需打开原文核对。</li>
+  <li>Brilliant Earth、Clean Origin、Keyzar、VRAI、Signet 投资者页拒绝抓取（403/409/429），按规范没有绕过。</li>
+  <li>Keyword Planner 搜索量与 CPC、Meta 受众规模与 CPM 需在投放团队开户后获取；CPC 基准存在冲突（$1.65 vs $4.31），本计划取 $2.50 并在软启动中校准。</li>
+  <li>社媒和评价每类样本只有 20–40 条，只看方向；亚马逊评价未抓。</li>
+  <li>真实成本、关税后到岸价、产能、价格弹性需公司内部数据和软启动测试补齐。</li>
+ </ul>
+ <h3>D. 模型公式</h3>
+ <div class="note">媒体 CAC = 基准 CAC × (预算 ÷ 100,000)<sup>弹性</sup>；付费新客 = (社媒 + 搜索 + 达人预算) ÷ 媒体 CAC；新客 = 付费新客 × (1 + 自然/推荐加成)；订单 = 新客 × (1 + 复购率)；收入 = 订单 × AOV；贡献 = 收入 × (毛利 − 变动费用)；MER = 收入 ÷ 营销预算；LTV(24 个月) = AOV × 1.4 × (毛利 − 变动费用)。季度排期 = 各科目金额 × 该科目的季度权重；月度 = 季度金额 × 月内权重（Q1 30/45/25、Q2 30/45/25、Q3 25/35/40、Q4 22/45/33）。</div>
+ <h3>E. 理论依据</h3>
+ <p style="font-size:13px;color:var(--sub)">科特勒、凯勒、切尔内夫《营销管理》（G-STIC、5C、STP、价值主张）；邱志圣 4P→7T；Barney（1991）VRIO；Denzin（1978）三角验证；Parasuraman 等（1988）SERVQUAL；凯勒 CBBE；Mela, Gupta &amp; Lehmann（1997）促销长期效应；科特勒《营销 4.0》5A；Court 等（2009）消费者决策旅程；Sharp（2010）；Binet &amp; Field（2013）；Rust, Lemon &amp; Zeithaml（2004）顾客资产；Johanson &amp; Vahlne（1977）乌普萨拉模型；Levitt（1983）；Schooler（1965）原产地效应；Vaver &amp; Koehler（2011）地理实验；Abadie 等（2010）合成对照；Ries（2011）精益创业。</p>
+</section>
+
+<div class="foot">LUMORA 美国培育钻石品牌年度营销计划 · CMO 办公室 · 2026-11-10 · 独立 HTML，金额随预算实时计算，无外部依赖</div>
+</main>
+</div>
+
+<script>
+(function(){
+"use strict";
+var ITEMS=[
+ {k:'social', name:'付费社媒 Meta + TikTok', pct:30, q:[15,18,17,50], c:'#1f2a44'},
+ {k:'search', name:'搜索与购物广告 Google', pct:18, q:[18,20,18,44], c:'#3a6ea5'},
+ {k:'infl',   name:'达人、联盟与 UGC',     pct:15, q:[20,20,20,40], c:'#b08d57'},
+ {k:'creative',name:'创意与内容制作',       pct:10, q:[40,20,20,20], c:'#d8bf8f'},
+ {k:'pr',     name:'PR、SEO 与 GEO',        pct:7,  q:[30,25,25,20], c:'#6b8f71'},
+ {k:'crm',    name:'CRM、评价与数据工具',   pct:5,  q:[25,25,25,25], c:'#8c6bb1'},
+ {k:'research',name:'调研、测试与归因',     pct:5,  q:[40,20,20,20], c:'#c98a1b'},
+ {k:'incent', name:'消费者激励',            pct:5,  q:[15,20,15,50], c:'#c0483d'},
+ {k:'reserve',name:'机动金（闸门释放）',    pct:5,  q:[0,0,30,70],   c:'#9aa3b5'}
+];
+var DEF_PCT={}; ITEMS.forEach(function(i){DEF_PCT[i.k]=i.pct;});
+var MW=[[30,45,25],[30,45,25],[25,35,40],[22,45,33]];
+var MONTHS=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+var DEF_A={aov:380,cac:160,el:0.15,org:0.2,rep:0.15,gm:0.68,vc:0.12,fixed:15000};
+var S={B:100000,pct:Object.assign({},DEF_PCT),A:Object.assign({},DEF_A)};
+
+function model(B,pct,A){
+ var v={B:B}; var sum=0;
+ ITEMS.forEach(function(i){var a=B*pct[i.k]/100; v['it_'+i.k]=a; sum+=a;});
+ v.allocSum=sum;
+ v.pool=v.it_social+v.it_search+v.it_infl;
+ v.cacMedia=A.cac*Math.pow(Math.max(B,1)/100000,A.el);
+ v.paidC=v.pool/v.cacMedia;
+ v.newC=v.paidC*(1+A.org);
+ v.orders=v.newC*(1+A.rep);
+ v.aov=A.aov; v.gm=A.gm; v.vc=A.vc;
+ v.rev=v.orders*A.aov;
+ v.unitContrib=A.aov*(A.gm-A.vc);
+ v.contrib=v.rev*(A.gm-A.vc);
+ v.contribAfter=v.contrib-sum;
+ v.fixedY=A.fixed*12;
+ v.opResult=v.contribAfter-v.fixedY;
+ v.beOrders=(sum+v.fixedY)/Math.max(v.unitContrib,1);
+ v.mer=v.rev/Math.max(sum,1);
+ v.cacFull=sum/Math.max(v.newC,1);
+ v.ltv=A.aov*1.4*(A.gm-A.vc);
+ v.ltvcac=v.ltv/Math.max(v.cacFull,1);
+ v.payback1=v.unitContrib>=v.cacFull?'首单即回本':'首单不回本，需约 '+(v.cacFull/v.unitContrib).toFixed(1)+' 单回本';
+ v.subs=v.newC*6;
+ v.somPct=v.rev/2e9;
+ // funnel
+ v.socialMedia=v.it_social*0.85;
+ v.impr=v.socialMedia/15.06*1000;
+ v.sesSocial=v.impr*0.012;
+ v.clkSearch=v.it_search/2.5;
+ v.sesInfl=v.it_infl*0.35;
+ v.ordSocial=v.sesSocial*0.009; v.ordSearch=v.clkSearch*0.018; v.ordInfl=v.sesInfl*0.010;
+ v.sesTotal=v.sesSocial+v.clkSearch+v.sesInfl;
+ v.funnelOrders=v.ordSocial+v.ordSearch+v.ordInfl;
+ v.gapPct=(v.funnelOrders-v.paidC)/Math.max(v.paidC,1);
+ // quarters
+ var q=[0,0,0,0];
+ ITEMS.forEach(function(i){for(var j=0;j<4;j++){var x=v['it_'+i.k]*i.q[j]/100; v['q_'+i.k+'_'+j]=x; q[j]+=x;}});
+ v.q1=q[0];v.q2=q[1];v.q3=q[2];v.q4=q[3];
+ v.months=[]; for(var j=0;j<4;j++){for(var m=0;m<3;m++){v.months.push(q[j]*MW[j][m]/100);}}
+ return v;
+}
+
+function money(x){
+ var s=x<0?'-':''; x=Math.abs(x);
+ if(x>=1e6) return s+'$'+(x/1e6).toFixed(2)+'M';
+ return s+'$'+Math.round(x).toLocaleString('en-US');
+}
+function fmt(x,f){
+ if(typeof x==='string') return x;
+ switch(f){
+  case 'int': return Math.round(x).toLocaleString('en-US');
+  case 'x': return x.toFixed(2)+'×';
+  case 'pct': return (x*100).toFixed(1)+'%';
+  case 'pct3': return (x*100).toFixed(3)+'%';
+  case 'raw': return Math.round(x).toLocaleString('en-US');
+  case 'txt': return String(x);
+  default: return money(x);
+ }
+}
+
+function svgEl(tag,attrs,text){var s='<'+tag;for(var k in attrs)s+=' '+k+'="'+attrs[k]+'"';return s+(text!=null?'>'+text+'</'+tag+'>':'/>');}
+
+function drawDonut(v){
+ var cx=150,cy=150,r=110,ir=66,tot=v.allocSum||1,a0=-Math.PI/2,out='';
+ ITEMS.forEach(function(i){
+  var val=v['it_'+i.k]; if(val<=0) return;
+  var a1=a0+val/tot*Math.PI*2; var large=(a1-a0)>Math.PI?1:0;
+  if(val/tot>0.9999){out+=svgEl('circle',{cx:cx,cy:cy,r:(r+ir)/2,fill:'none',stroke:i.c,'stroke-width':r-ir});a0=a1;return;}
+  var p=function(rr,a){return (cx+rr*Math.cos(a)).toFixed(2)+','+(cy+rr*Math.sin(a)).toFixed(2);};
+  out+=svgEl('path',{d:'M'+p(r,a0)+' A'+r+','+r+' 0 '+large+' 1 '+p(r,a1)+' L'+p(ir,a1)+' A'+ir+','+ir+' 0 '+large+' 0 '+p(ir,a0)+' Z',fill:i.c,stroke:'#fff','stroke-width':1.5});
+  a0=a1;
+ });
+ out+=svgEl('text',{x:cx,y:cy-4,'text-anchor':'middle','font-size':13,fill:'#5b6478'},'年度营销预算');
+ out+=svgEl('text',{x:cx,y:cy+20,'text-anchor':'middle','font-size':22,'font-weight':700,fill:'#1f2a44'},money(v.allocSum));
+ document.getElementById('donut').innerHTML='<svg viewBox="0 0 300 300" width="100%" style="max-width:320px;display:block;margin:auto">'+out+'</svg>';
+ document.getElementById('donutLegend').innerHTML=ITEMS.map(function(i){return '<span><i style="background:'+i.c+'"></i>'+i.name+' '+(S.pct[i.k]||0)+'%</span>';}).join('');
+}
+
+function drawMonths(v){
+ var W=900,H=220,pl=60,pb=28,pt=16,max=Math.max.apply(null,v.months)||1,bw=(W-pl-10)/12,out='';
+ for(var g=0;g<=4;g++){var y=pt+(H-pt-pb)*(1-g/4);out+=svgEl('line',{x1:pl,x2:W-5,y1:y,y2:y,stroke:'#eee9de'});out+=svgEl('text',{x:pl-6,y:y+4,'text-anchor':'end','font-size':11,fill:'#5b6478'},money(max*g/4));}
+ v.months.forEach(function(m,ix){var h=(H-pt-pb)*m/max,x=pl+ix*bw+6,y=H-pb-h;
+  out+=svgEl('rect',{x:x,y:y,width:bw-12,height:h,rx:4,fill:ix>=9?'#b08d57':'#2f3f63'});
+  out+=svgEl('text',{x:x+(bw-12)/2,y:y-4,'text-anchor':'middle','font-size':10.5,fill:'#1d2433'},money(m));
+  out+=svgEl('text',{x:x+(bw-12)/2,y:H-8,'text-anchor':'middle','font-size':12,fill:'#5b6478'},MONTHS[ix]);});
+ document.getElementById('monthChart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%">'+out+'</svg>';
+}
+
+function drawQ(v){
+ var W=900,H=170,pl=60,pr=10,rowH=30,out='',qs=[v.q1,v.q2,v.q3,v.q4],max=Math.max.apply(null,qs)||1;
+ qs.forEach(function(qt,j){var x=pl,y=10+j*(rowH+8);
+  out+=svgEl('text',{x:pl-8,y:y+rowH/2+4,'text-anchor':'end','font-size':12,fill:'#1d2433'},'Q'+(j+1));
+  ITEMS.forEach(function(i){var w=(W-pl-pr-80)*v['q_'+i.k+'_'+j]/max; if(w>0){out+=svgEl('rect',{x:x,y:y,width:w,height:rowH,fill:i.c});x+=w;}});
+  out+=svgEl('text',{x:x+6,y:y+rowH/2+4,'font-size':12,'font-weight':600,fill:'#1f2a44'},money(qt));});
+ document.getElementById('qChart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%">'+out+'</svg>';
+ document.getElementById('qLegend').innerHTML=ITEMS.map(function(i){return '<span><i style="background:'+i.c+'"></i>'+i.name+'</span>';}).join('');
+}
+
+function buildAlloc(){
+ var tb=document.querySelector('#allocTbl tbody'); tb.innerHTML='';
+ ITEMS.forEach(function(i){
+  var tr=document.createElement('tr');
+  tr.innerHTML='<td><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:'+i.c+';margin-right:6px"></i>'+i.name+'</td>'+
+   '<td class="r"><input type="number" min="0" max="100" step="1" data-p="'+i.k+'" value="'+S.pct[i.k]+'"></td>'+
+   '<td class="r dyn" data-v="it_'+i.k+'">—</td><td><div class="bar-in"><div data-bar="'+i.k+'"></div></div></td>';
+  tb.appendChild(tr);
+ });
+ tb.querySelectorAll('input[data-p]').forEach(function(inp){inp.addEventListener('input',function(){S.pct[inp.dataset.p]=Math.max(0,parseFloat(inp.value)||0);render();});});
+}
+
+function buildQ(v){
+ var tb=document.querySelector('#qTbl tbody'),tf=document.querySelector('#qTbl tfoot'),h='';
+ ITEMS.forEach(function(i){h+='<tr><td>'+i.name+'</td>';for(var j=0;j<4;j++)h+='<td class="r">'+money(v['q_'+i.k+'_'+j])+'</td>';h+='<td class="r"><b>'+money(v['it_'+i.k])+'</b></td></tr>';});
+ tb.innerHTML=h;
+ var tot=v.allocSum||1;
+ tf.innerHTML='<tr><td>合计</td><td class="r">'+money(v.q1)+'</td><td class="r">'+money(v.q2)+'</td><td class="r">'+money(v.q3)+'</td><td class="r">'+money(v.q4)+'</td><td class="r">'+money(v.allocSum)+'</td></tr>'+
+  '<tr><td>占比</td><td class="r">'+fmt(v.q1/tot,'pct')+'</td><td class="r">'+fmt(v.q2/tot,'pct')+'</td><td class="r">'+fmt(v.q3/tot,'pct')+'</td><td class="r">'+fmt(v.q4/tot,'pct')+'</td><td class="r">100%</td></tr>';
+}
+
+function buildScen(){
+ var rows=[0.5,1,1.5,2,3],h='';
+ rows.forEach(function(f){var B=S.B*f,v=model(B,S.pct,S.A);
+  h+='<tr'+(f===1?' style="background:#faf3e3;font-weight:600"':'')+'><td>'+money(B)+(f===1?'（当前）':'')+'</td><td class="r">'+money(v.cacMedia)+'</td><td class="r">'+fmt(v.newC,'int')+'</td><td class="r">'+money(v.rev)+'</td><td class="r">'+fmt(v.mer,'x')+'</td><td class="r '+(v.contribAfter>=0?'ok':'bad')+'">'+money(v.contribAfter)+'</td><td class="r '+(v.opResult>=0?'ok':'bad')+'">'+money(v.opResult)+'</td></tr>';});
+ document.querySelector('#scenTbl tbody').innerHTML=h;
+}
+
+function render(){
+ var v=model(S.B,S.pct,S.A);
+ document.querySelectorAll('[data-v]').forEach(function(el){
+  var x=v[el.dataset.v]; if(x===undefined) return;
+  if(typeof x==='number' && el.dataset.mul) x=x*parseFloat(el.dataset.mul);
+  el.textContent=fmt(x,el.dataset.f);
+ });
+ var ps=0; ITEMS.forEach(function(i){ps+=S.pct[i.k]||0;});
+ document.getElementById('pctSum').textContent=ps.toFixed(0)+'%';
+ var w=document.getElementById('pctWarn');
+ if(Math.abs(ps-100)>0.01){w.style.display='block';w.textContent='各科目占比合计 '+ps.toFixed(0)+'%，与 100% 不符：实际分配 '+money(v.allocSum)+'，与总预算差 '+money(S.B-v.allocSum)+'。可点“按比例归一”。';}else w.style.display='none';
+ ITEMS.forEach(function(i){var b=document.querySelector('[data-bar="'+i.k+'"]');if(b)b.style.width=Math.min(100,(S.pct[i.k]||0)/40*100)+'%';});
+ drawDonut(v);drawMonths(v);drawQ(v);buildQ(v);buildScen();
+ ['contribAfter','opResult'].forEach(function(k){document.querySelectorAll('[data-v="'+k+'"]').forEach(function(el){el.style.color=v[k]>=0?'':'#c0483d';});});
+}
+
+function setB(b,src){
+ b=Math.max(10000,Math.min(5000000,Math.round(+b||0)));
+ S.B=b;
+ if(src!=='in') document.getElementById('bIn').value=b;
+ if(src!=='range') document.getElementById('bRange').value=Math.min(1000000,b);
+ document.querySelectorAll('.presets .btn').forEach(function(x){x.classList.toggle('on',+x.dataset.b===b);});
+ render();
+}
+
+document.getElementById('bIn').addEventListener('change',function(e){setB(e.target.value,'in');});
+document.getElementById('bIn').addEventListener('input',function(e){if(+e.target.value>=10000)setB(e.target.value,'in');});
+document.getElementById('bRange').addEventListener('input',function(e){setB(e.target.value,'range');});
+document.querySelectorAll('.presets .btn').forEach(function(x){x.addEventListener('click',function(){setB(x.dataset.b);});});
+document.getElementById('normBtn').addEventListener('click',function(){var ps=0;ITEMS.forEach(function(i){ps+=S.pct[i.k]||0;});if(ps<=0)return;ITEMS.forEach(function(i){S.pct[i.k]=Math.round((S.pct[i.k]||0)/ps*1000)/10;});buildAlloc();render();});
+document.getElementById('resetBtn').addEventListener('click',function(){S.pct=Object.assign({},DEF_PCT);S.A=Object.assign({},DEF_A);buildAlloc();fillA();render();});
+function fillA(){document.querySelectorAll('[data-a]').forEach(function(inp){inp.value=S.A[inp.dataset.a];});}
+document.querySelectorAll('[data-a]').forEach(function(inp){inp.addEventListener('input',function(){var x=parseFloat(inp.value);if(!isNaN(x)){S.A[inp.dataset.a]=x;render();}});});
+
+buildAlloc();fillA();render();
+})();
+</script>
+</body>
+</html>
